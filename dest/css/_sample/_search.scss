@@ -1,0 +1,33 @@
+// ----------------------------------------------------------------
+// search
+// ----------------------------------------------------------------
+// area
+// -----------------------------------
+.search-area {
+    & > .columns > .column + .column {
+        @include touch {
+            margin-top: -10px;
+        }
+    }
+    .field {
+        align-items: center;
+    }
+    .field-label {
+        margin-bottom: 0;
+    }
+    .label {
+        @include desktop {
+            font-size: 16px;
+        }
+        @include touch {
+            min-width: 8em;
+            white-space: nowrap;
+        }
+    }
+    .input {
+        @include desktop {
+            width: 274px;
+        }
+    }
+}
+//# sourceMappingURL=../sourcemaps/_sample/_search.scss.map

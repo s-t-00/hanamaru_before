@@ -1,0 +1,21 @@
+// ----------------------------------------------------------------
+// sticky banner
+// ----------------------------------------------------------------
+@include touch {
+  .quick-diagnosis {
+    min-width: $content-layout-sp-width;
+    left: 0;
+    right: initial;
+    bottom: 0;
+    position: fixed;
+    z-index: 99;
+  }
+}
+
+@include desktop {
+  .quick-diagnosis {
+    min-width: auto;
+    left: initial;
+    right: 0;
+  }
+}

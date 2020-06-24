@@ -1,0 +1,22 @@
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+.color-pink { color: $color-pink; }
+.color-green { color: $color-green; }
+
+.icon-right-arrow::before {
+  content: "\025b6";
+  margin-right: 4px;
+}
+
+@include touch {
+  .sp-none { display: none; }
+  .pc-none { display: block; }
+}
+@include desktop {
+  .sp-none { display: block; }
+  .pc-none { display: none; }
+}

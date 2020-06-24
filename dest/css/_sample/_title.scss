@@ -1,0 +1,51 @@
+// ----------------------------------------------------------------
+// title
+// ----------------------------------------------------------------
+
+// 01
+// -----------------------------------
+.title-01 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.33;
+    letter-spacing: 2.4px;
+    color: $grey;
+    font-weight: bold;
+    @include touch {
+        font-size: 24px;
+    }
+    &:not(:last-child) {
+        margin-bottom: 40px;
+        @include touch {
+            margin-bottom: 20px;
+        }
+    }
+    &::after {
+        content: "";
+        height: 5px;
+        margin: 15px auto 0;
+        display: block;
+        background: url(../images/title-bg.png) no-repeat center center;
+        background-size: auto 5px;
+        @include touch {
+            background-image: url(../images/title-bg-sp.png);
+            background-size: auto 3px;
+            height: 3px;
+            margin-top: 10px;
+        }
+    }
+    &-sub {
+        display: block;
+        font-size: 16px;
+        letter-spacing: 1.6px;
+        font-family: $body-family;
+        color: $primary-dark;
+        margin-bottom: 10px;
+        @include touch {
+            font-size: 16px;
+            margin-bottom: 5px;
+            letter-spacing: 1.2px;
+        }
+    }
+}
+//# sourceMappingURL=../sourcemaps/_sample/_title.scss.map

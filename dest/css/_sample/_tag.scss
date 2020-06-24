@@ -1,0 +1,61 @@
+// ----------------------------------------------------------------
+// tag
+// ----------------------------------------------------------------
+// tags
+// -----------------------------------
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    overflow: hidden;
+    @include touch {
+        margin: 0 auto 15px;
+        justify-content: center;
+    }
+    & > * {
+        margin-bottom: 0;
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+    &:not(:last-child) {
+        margin-bottom: 20px;
+        @include touch {
+            margin-bottom: 10px;
+        }
+    }
+    .tag-attr {
+        margin-bottom: 0;
+    }
+    &.is-fit {
+        & > * {
+            min-width: calc(50% - 12px);
+        }
+    }
+}
+
+// attr
+// -----------------------------------
+.tag-attr {
+    padding: 4px 26px;
+    border-radius: 13px;
+    border: solid 1px $primary;
+    line-height: 1.3;
+    background-color: #ffffff;
+    color: $primary;
+    font-size: 13px;
+    @include touch {
+        font-size: 12px;
+    }
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+    .tags.is-fit & {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+//# sourceMappingURL=../sourcemaps/_sample/_tag.scss.map

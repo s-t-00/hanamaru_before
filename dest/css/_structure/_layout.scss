@@ -1,0 +1,25 @@
+.header, .main, .footer {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.block-inner {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@include desktop {
+  .block-inner {
+    width: $content-layout-width;
+    min-width: $content-layout-width;
+  }
+}
+
+.box-wrapper {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+//# sourceMappingURL=../sourcemaps/_structure/_layout.scss.map

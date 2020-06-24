@@ -1,0 +1,24 @@
+// ----------------------------------------------------------------
+// link
+// ----------------------------------------------------------------
+// next
+// -----------------------------------
+.link-next {
+    display: inline-flex;
+    align-items: center;
+    &:hover {
+        text-decoration: underline;
+        color: $secondary;
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        @extend %get-icon;
+        margin-left: 16px;
+        @include touch {
+            transform: scale(0.75);
+            margin-left: 10px;
+        }
+    }
+}
+//# sourceMappingURL=../sourcemaps/_sample/_link.scss.map

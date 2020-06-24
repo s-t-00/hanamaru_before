@@ -1,0 +1,181 @@
+/* ----------------------------------------------------------------
+header
+-------------------------------------------------------------------*/
+@include touch {
+  .header {
+    .header-logo {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      .header-site-logo img {
+        width: 157px;
+      }
+      a.navbar-opener {
+        position: absolute;
+        background-image: url(/images/common/navbar-opener.png);
+        background-size: contain;
+        right: 20px;
+        top: 22px;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .navbar-block {
+      left: 0;
+      top: 91px;
+      width: 100%;
+      height: 165px;
+      display: none;
+      position: absolute;
+      background-color: $color-green;
+      z-index: 100;
+      ul {
+        width: 100%;
+        max-width: $content-layout-sp-width;
+        display: block;
+        margin: 0 auto;
+        li {
+          text-indent: -9999%;
+          width: 33.33%;
+          text-align: center;
+          padding: 18px 0 0;
+          display: block;
+          float: left;
+          a {
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+          }
+        }
+        li:nth-child(n + 4) {
+          width: 50%;
+        }
+        .nav-home a {
+          height: 62px;
+          background-image: url(/images/common/navbar-home-sp.png);
+        }
+        .nav-inquiry a {
+          height: 61px;
+          background-image: url(/images/common/navbar-inquiry-sp.png);
+        }
+        .nav-faq a {
+          height: 62px;
+          background-image: url(/images/common/navbar-faq-sp.png);
+        }
+        .nav-registration a {
+          height: 40px;
+          background-image: url(/images/common/navbar-resistration-sp.png);
+        }
+        .nav-login a {
+          height: 40px;
+          background-image: url(/images/common/navbar-mypage-login-sp.png);
+        }
+      }
+    }
+    .header-concept {
+      border-top: 1px solid $color-pink;
+      border-bottom: 1px solid $color-pink;
+      .box-inner {
+        text-align: center;
+        padding: 15px 0;
+        color: $color-pink;
+        @include font-line-height(20, 26);
+        span {
+          color: $font-color;
+          @include font-size(14);
+          padding-top: 4px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .header {
+    .box-inner {
+      display: table;
+      padding: 20px 0;
+    }
+    .header-logo {
+      padding: 0;
+      width: 200px;
+      display: table-cell;
+      .header-site-logo img {
+        width: 200px;
+      }
+      a.navbar-opener {
+        display: none;
+      }
+    }
+    .navbar-block {
+      position: static;
+      width: 730px;
+      height: auto;
+      padding-left: 70px;
+      display: table-cell;
+      background-color: inherit;
+      vertical-align: middle;
+      z-index: auto;
+      &.show {
+        display: table-cell !important;
+      }
+      ul {
+        max-width: 100%;
+        margin: 0;
+        li {
+          width: auto;
+          display: inline-block;
+          padding: 0;
+          float: left;
+          a {
+            margin-right: 20px;
+          }
+        }
+        li:nth-child(n + 4) {
+          width: auto;
+        }
+        li:last-of-type a {
+          margin-right: 0;
+        }
+        .nav-home a {
+          width: 79px;
+          height: 42px;
+          background-image: url(/images/common/navbar-home.png);
+        }
+        .nav-inquiry a {
+          width: 125px;
+          height: 42px;
+          background-image: url(/images/common/navbar-inquiry.png);
+        }
+        .nav-faq a {
+          width: 130px;
+          height: 42px;
+          background-image: url(/images/common/navbar-faq.png);
+        }
+        .nav-registration a {
+          width: 103px;
+          height: 42px;
+          background-image: url(/images/common/navbar-resistration.png);
+        }
+        .nav-login a {
+          width: 103px;
+          height: 42px;
+          background-image: url(/images/common/navbar-mypage-login.png);
+        }
+      }
+    }
+    .header-concept {
+      .box-inner {
+        padding: 10px 0;
+        @include font-line-height(20, 26);
+        span {
+          @include font-size(16);
+          padding-top: 0;
+          display: inline;
+        }
+      }
+    }
+  }
+}

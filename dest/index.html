@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>はなまる -終活まとめてコンシェルジュ-</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="description" content="">
+        <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/index.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    </head>
+    <body id="body">
+        <!-- header -->
+        <header class="header" header>
+            <nav class="box-wrapper" role="navigation" aria-label="main navigation">
+                <div class="box-inner">
+                    <div class="header-logo">
+                        <h1>
+                            <a href="/" class="header-site-logo"><img src="/images/common/sitelogo.png" alt="はなまる -終活まとめてコンシェルジュ-"></a>
+                        </h1>
+                        <a href="javascript:;" class="navbar-opener"></a>
+                    </div>
+                    <div class="navbar-block">
+                        <ul class="navbar">
+                            <li class="nav-home">
+                                <a href="#">
+                                    <span> ホーム </span>
+                                </a>
+                            </li>
+                            <li class="nav-inquiry">
+                                <a href="#">
+                                    <span> お問い合わせ </span>
+                                </a>
+                            </li>
+                            <li class="nav-faq">
+                                <a href="#">
+                                    <span> よくあるご質問 </span>
+                                </a>
+                            </li>
+                            <li class="nav-registration">
+                                <a href="#">
+                                    <span> 会員登録 </span>
+                                </a>
+                            </li>
+                            <li class="nav-login">
+                                <a href="#">
+                                    <span> マイページ ログイン </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <section class="header-concept box-wrapper" role="complementary" area-label="終活に関する不安、お悩みを専門家が無料でアドバイスします。">
+                <div class="box-inner">
+                    <p>終活に関する不安、お悩みを<br class="pc-none">専門家が無料でアドバイスします。<br class="pc-none"><span>まずは「節税簡単クイック診断」をチェック！</span></p>
+                </div>
+            </section>
+        </header>
+        <!-- / header -->
+        <!-- main -->
+        <article class="main">
+            <section class="box-wrapper top-section01" id="top-diagnosis-form">
+                <div class="box-inner">
+                    <div class="top-sec01-title">
+                        <h2>
+                            <img src="/images/top/sec01-title01.png" alt="終活に必要な資金簡単クイック診断" class="sp-none">
+                            <img src="/images/top/sec01-title01-sp.png" alt="終活に必要な資金簡単クイック診断" class="pc-none">
+                        </h2>
+                        <p>【STEP1】～【STEP3】を<br>入力すれば、相続税簡易試算できます。</p>
+                    </div>
+                    <div class="top-sec01-form">
+                        <form action="#" method="POST" id="diagnosis">
+                            <div class="form-field-wrapper">
+                                <p class="top-sec01-form-title"><img src="/images/top/sec01-title02-01.png" alt="Step.1 法定相続人の設定"></p>
+                                <div class="form-field">
+                                    <div class="form-field-label">配偶者</div>
+                                    <div class="form-field-content">
+                                        <div class="form-control form-control-radio">
+                                            <label>
+                                                <input type="radio" name="spouse"><span></span>あり </label>
+                                        </div>
+                                        <div class="form-control form-control-radio">
+                                            <label>
+                                                <input type="radio" name="spouse"><span></span>なし </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <div class="form-field-label">子供<span>（5名まで）</span></div>
+                                    <div class="form-field-content">
+                                        <div class="form-control form-control-radio">
+                                            <label>
+                                                <input type="radio" name="children"><span></span>あり <input type="number" name="children-num" min="1" max="5" class="js-clickable"><span class="form-control-unit">人</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-control form-control-radio">
+                                            <label>
+                                                <input type="radio" name="children"><span></span>なし </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <div class="form-field-label">父母<span>（2名まで）</span>
+                                    </div>
+                                    <div class="form-field-content">
+                                        <div class="form-control form-control-radio">
+                                            <label>
+                                                <input type="radio" name="parents"><span></span>あり <input type="number" name="parents-num" min="1" max="2" class="js-clickable"><span class="form-control-unit">人</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-control form-control-radio">
+                                            <label>
+                                                <input type="radio" name="parents"><span></span>なし </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <div class="form-field-label">兄弟姉妹<span>（5名まで）</span></div>
+                                    <div class="form-field-content">
+                                        <div class="form-control form-control-radio">
+                                            <label>
+                                                <input type="radio" name="brother"><span></span>あり <input type="number" name="brother-num" min="1" max="5" class="js-clickable"><span class="form-control-unit">人</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-control form-control-radio">
+                                            <label>
+                                                <input type="radio" name="brother"><span></span>なし </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-field-wrapper">
+                                <p class="top-sec01-form-title"><img src="/images/top/sec01-title02-02.png" alt="Step.2 相続財産額の設定"></p>
+                                <div class="form-field form-field-single">
+                                    <div class="form-control form-control-text">
+                                        <input type="number" min="0" max="9999999999"><span class="form-control-unit">万円</span>
+                                    </div>
+                                </div>
+                                <p class="top-sec01-form-title"><img src="/images/top/sec01-title02-03.png" alt="Step.3 配偶者の財産取得割合の設定"></p>
+                                <div class="form-field form-field-single">
+                                    <div class="form-control form-control-text">
+                                        <input type="number" min="0" max="100"><span class="form-control-unit">%</span>
+                                    </div>
+                                    <p class="form-control-help">配偶者「無」の場合には、「0」を選択してください</p>
+                                </div>
+                            </div>
+                            <div class="form-field-footer">
+                                <div class="form-control form-control-button">
+                                    <button class="button">診断結果を見る</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="box-wrapper top-section02">
+                <div class="box-inner">
+                    <h3><span>充実した“これから”を過ごすために</span></h3>
+                    <div class="top-sec02-text-wrapper">
+                        <div class="top-sec02-text-left">
+                            <h4>「はなまる」でできること</h4>
+                            <p> 「はなまる」はそろそろ終活をしなければいけないとお考えの方やそのご家族の方がご利用できる「終活まとめコンシェルジュ」です。終活の対策は早ければ早いほど、納税資金の税金対策や、様々な最新の法律に元づく特例を利用するための準備ができます。<br>最終的にだれにでもやってくる終活にかかる費用・トラブル・問題点が対策をするのとしないのでは大きく結果が違ってきます。<br>ぜひ無料マイページ診断を利用いただきご自身や、相続をすることになるご家族の方々に「最良の終活方法」を見つけてみてはいかがでしょうか。 </p>
+                        </div>
+                        <div class="top-sec02-text-right">
+                            <p><span class="color-pink">■</span> 無料会員ページご活用方法</p>
+                            <iframe id="ytplayer" type="text/html" width="370" height="210" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com" frameborder="0"></iframe>
+                            <a href="#">その他動画を見る <span class="color-pink">▶︎</span></a>
+                        </div>
+                        <span class="top-sec02-character"><img src="/images/top/sec02-ill01.png" alt="まずは動画をチェック！"></span>
+                    </div>
+                </div>
+            </section>
+            <section class="box-wrapper top-section03">
+                <div class="box-inner">
+                    <h3>突然ですが、終活は<br class="pc-none">「一人では完結できません」</h3>
+                    <div class="top-sec03-specialties">
+                        <p>終活には「託す方」「託される方」双方が、<br class="pc-none">たくさんの専門家への相談や対策が必要です。</p>
+                        <div class="top-sec03-specialties01">
+                            <h4>
+                                <img src="/images/top/sec03-title01.png" alt="事前対策">
+                            </h4>
+                            <ul>
+                                <li>
+                                    <h5>相続税／贈与対策</h5>
+                                    <p class="icon-right-arrow">税理士</p>
+                                </li>
+                                <li>
+                                    <h5>遺言／成年後見／家族相続</h5>
+                                    <p class="icon-right-arrow">司法書士・弁護士</p>
+                                </li>
+                                <li>
+                                    <h5>介護施設の比較選定</h5>
+                                    <p class="icon-right-arrow">○●○●○●</p>
+                                </li>
+                                <li>
+                                    <h5>ファイナンシャルプラン</h5>
+                                    <p class="icon-right-arrow">FP</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top-sec03-specialties02">
+                            <h4>
+                                <img src="/images/top/sec03-title02.png" alt="ご不幸があった時">
+                            </h4>
+                            <ul>
+                                <li>
+                                    <h5>葬儀</h5>
+                                    <p class="icon-right-arrow">葬儀社</p>
+                                </li>
+                                <li>
+                                    <h5>お墓</h5>
+                                    <p class="icon-right-arrow">石材店・お寺等</p>
+                                </li>
+                                <li>
+                                    <h5>遺品整理</h5>
+                                    <p class="icon-right-arrow">○●○●○●</p>
+                                </li>
+                                <li>
+                                    <h5>仏壇・位牌・メモリアル物</h5>
+                                    <p class="icon-right-arrow">○●○●○●</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top-sec03-specialties03">
+                            <h4>
+                                <img src="/images/top/sec03-title03.png" alt="相続時">
+                            </h4>
+                            <ul>
+                                <li>
+                                    <h5>相続税の申告</h5>
+                                    <p class="icon-right-arrow">葬儀社</p>
+                                </li>
+                                <li>
+                                    <h5>法的手続き</h5>
+                                    <p class="icon-right-arrow">石材店・お寺等</p>
+                                </li>
+                                <li>
+                                    <h5>不動産の売却／相続財産の<br>ファイナンシャルプラン</h5>
+                                    <p class="icon-right-arrow">○●○●○●</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="top-sec03-result-arrow"></span>
+                        <p class="top-sec03-result">相談をするだけでなく<br class="pc-none">「各相談にどれくらいの」<br class="pc-none">「全体でどれくらいの」<br>金額が必要になるかの<br class="pc-none">確認も重要です</p>
+                    </div>
+            </section>
+            <section class="box-wrapper top-section04">
+                <div class="box-inner">
+                    <h3>〝終活のすべてをワンストップで〟はなまるサービスの特徴をご紹介</h3>
+                    <div class="top-sec04-service01">
+                        <img src="/images/top/sec04-ill01.png" alt="">
+                        <h4>誰もがする必要のある終活項目を<br>ワンストップで解決</h4>
+                        <p> 終活で起こりうる問題点を診断し、サイト内で相談しなければいけない専門家を見つけることが可能。業種をまたいでワンストップで解決できます。<br>「的確」に「無料」で、一人一人の状況によって対策をしないといけない項目やあなたの納税準備資金、終活に必要な費用を把握することができます。 </p>
+                    </div>
+                    <div class="top-sec04-service02">
+                        <img src="/images/top/sec04-ill02.png" alt="">
+                        <h4>自宅にいながらすべての業種と<br>オンライン無料相談</h4>
+                        <p> 従来の終活相談でよくある、１つ１つの異なった専門業種にそのつど相談に行かねばならず、同じ状況説明を何回もするなどの労力は不要です。<br>はなまるでは自宅にいながら無料で各専門家とオンライン相談ができ、色々な悩み事や分からないことの相談をワンストップで行うことができます。 </p>
+                    </div>
+                    <div class="top-sec04-service03">
+                        <img src="/images/top/sec04-ill03.png" alt="">
+                        <h4>マイページであなたの終活対策を<br>分かりやすく進めていけます</h4>
+                        <p> 無料会員登録をすれば、だれでも簡単にマイページであなたの終活対策を進めることができます。<br>入力された項目から重要度に応じて状況を把握。しなければいけないケースや状況を分かりやすく把握でき、スムーズに終活の問題を解決、また対策を進めていけます。 </p>
+                    </div>
+                    <p class="top-sec04-result">「託す方」「託される方」どちらも納得できる理想の終活をサポート致します</p>
+                </div>
+            </section>
+            <section class="box-wrapper top-section05">
+                <div class="box-inner">
+                    <h3>最新情報</h3>
+                    <dl>
+                        <dt>2020.4.14</dt>
+                        </dd>ここに最新情報が入ります。詳しくは決まり次第反映させます。ここに最新情報が入ります。詳しくは決まり次第反映させます。</dd>
+                        <dt>2020.4.13</dt>
+                        </dd>ここに最新情報が入ります。詳しくは決まり次第反映させます。ここに最新情報が入ります。詳しくは決まり次第反映させます。</dd>
+                        <dt>2020.4.12</dt>
+                        </dd>ここに最新情報が入ります。詳しくは決まり次第反映させます。ここに最新情報が入ります。詳しくは決まり次第反映させます。</dd>
+                    </dl>
+                </div>
+            </section>
+            <section class="box-wrapper top-section06">
+                <div class="box-inner">
+                    <h3>ご利用の流れ</h3>
+                    <div class="top-sec06-wrapper">
+                        <div class="top-sec06-item">
+                            <h4><img src=""></h4>
+                            <p>所要時間わずか1分。無料会員登録をしてあなたのマイページを作成。</p>
+                        </div>
+                        <div class="top-sec06-item">
+                            <h4><img src=""></h4>
+                            <p>終活の悩みや状況を入力して、専門家が 対策すべき項目や相談を項目に応じて診断し、明確化していきします。</p>
+                        </div>
+                        <div class="top-sec06-item">
+                            <h4><img src=""></h4>
+                            <p>診断で表示された解決・対策すべき項目をワンストップで各専門家に相談。自宅にいながら気軽に相談ができます。</p>
+                        </div>
+                    </div>
+                    <div class="top-sec06-video">
+                        <div class="top-sec06-video-item">
+                            <h4><span class="color-green">■</span> マイページのご活用方法</h4>
+                        </div>
+                        <div class="top-sec06-video-item">
+                            <h4><span class="color-green">■</span> 無料オンライン相談ご活用方法</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="box-wrapper top-section07">
+                <div class="box-inner">
+                    <h3>相談したい項目・記事を探す</h3>
+                    <ul>
+                        <li><a href="#"><img src="/images/top/sec07-01.png" alt="税務"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-02.png" alt="法務"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-03.png" alt="不動産"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-04.png" alt="ファイナンシャルプラン"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-05.png" alt="介護施設"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-06.png" alt="介護タクシー"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-07.png" alt="葬儀"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-08.png" alt="お墓"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-09.png" alt="仏具・位牌"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-10.png" alt="遺品整理"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-11.png" alt="遺骨でつくるダイヤモンド"></a></li>
+                        <li><a href="#"><img src="/images/top/sec07-12.png" alt="樹木層海洋散骨"></a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="box-wrapper top-section08">
+                <div class="box-inner">
+                    <h3>終活コラム・人気記事</h3>
+                    <div class="top-sec08-ranking">
+                        <h4><img src="/images/top/sec08-title01.png" alt="検索ワードランキング"></h4>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h5><img src="/images/top/sec08-title01-01.png" alt="1位 相続について"></h5>
+                                    <img src="/images/top/sec08-01-01.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h5><img src="/images/top/sec08-title01-02.png" alt="2位 生前手続きについて"></h5>
+                                    <img src="/images/top/sec08-01-02.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h5><img src="/images/top/sec08-title01-03.png" alt="3位 介護について"></h5>
+                                    <img src="/images/top/sec08-01-03.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-sec08-ranking">
+                        <h4><img src="/images/top/sec08-title02.png" alt="急上昇ランキング"></h4>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <h5><img src="/images/top/sec08-title02-01.png" alt="1位 生前手続きについて"></h5>
+                                    <img src="/images/top/sec08-02-01.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h5><img src="/images/top/sec08-title02-02.png" alt="2位 介護について"></h5>
+                                    <img src="/images/top/sec08-02-02.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <h5><img src="/images/top/sec08-title02-03.png" alt="3位 遺産について"></h5>
+                                    <img src="/images/top/sec08-02-03.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="box-wrapper top-section09">
+                <div class="box-inner">
+                    <h3>よくあるご質問</h3>
+                    <ul>
+                        <li><a href="#"><img src="/images/top/sec09-01.png" alt="当サイトのご利用について"></a></li>
+                        <li><a href="#"><img src="/images/top/sec09-02.png" alt="サポートセンターはありますか？"></a></li>
+                        <li><a href="#"><img src="/images/top/sec09-03.png" alt="もっと見る"></a></li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+        <!-- / main -->
+        <!-- footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="footer-logo">
+                <a href="/">
+                    <img src="/images/common/sitelogo.png" alt="はなまる -終活まとめてコンシェルジュ-">
+                </a>
+            </div>
+            <div class="footer-nav footer-nav1">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">ホーム</a>
+                        </li>
+                        <li>
+                            <a href="#">お問い合せ</a>
+                        </li>
+                        <li>
+                            <a href="#">よくあるご質問</a>
+                        </li>
+                        <li>
+                            <a href="#">会員登録</a>
+                        </li>
+                        <li>
+                            <a href="#">ログイン</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-nav footer-nav2">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">会社概要</a>
+                        </li>
+                        <li>
+                            <a href="#">プライバシーポリシー</a>
+                        </li>
+                        <li>
+                            <a href="#">利用規約</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-copyrights">
+                <p>Copyright (c) 2020 SHUKATSU NO MADOGUCHI<br class="pc-none">All Rights Reserved. 不許複製 無断転載</p>
+            </div>
+        </footer>
+        <!-- / footer -->
+        <!-- 診断ボタン -->
+        <aside class="quick-diagnosis" role="banner">
+            <aside class="quick-diagnosis" role="banner">
+                <a href="/#top-diagnosis-form">
+                    <p class="sp-none"><img src="/images/common/but-diagnosis.png" alt="資産の種類を選ぶだけでカンタンにおおよその納税準備金を確認できます"></p>
+                    <p class="pc-none"><img src="/images/common/but-diagnosis-sp.png" alt="資産の種類を選ぶだけでカンタンにおおよその納税準備金を確認できます"></p>
+                </a>
+            </aside>
+        </aside>
+        <!-- / 診断ボタン -->
+        <script src="js/vendor.js"></script>
+        <script src="js/common.js"></script>
+    </body>
+</html>

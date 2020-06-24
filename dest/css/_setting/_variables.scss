@@ -1,0 +1,23 @@
+$breakpoints: (
+  'sp': 'media all',
+  'pc': 'media all and (min-width: 769px)',
+) !default;
+
+// COMMON
+$font-color: #707070;
+$color-pink: #EF8971;
+$color-green: #98BF29;
+$color-blue: #A0DDCC;
+$color-white: #ffffff;
+
+$body-family: "HiraKakuPro-W3", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", YuGothic, "游ゴシック", "メイリオ", "Meiryo",
+    "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+$body-line-height: 1.5;
+$content-layout-width: 1000px;
+
+
+// form control
+$control-height: 30px;
+$control-height-mobile: 45px;
+//# sourceMappingURL=../sourcemaps/_setting/_variables.scss.map

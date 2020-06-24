@@ -1,0 +1,30 @@
+@import "_setting/_variables";
+@import "_setting/_mixin";
+
+// base
+// -----------------------------------
+@import "_setting/_minireset";
+@import "_setting/_util";
+
+// global（各レイアウト）
+// -----------------------------------
+@import "_structure/_global";
+@import "_structure/_layout";
+@import "_structure/_header";
+@import "_structure/_footer";
+@import "_structure/_sticky";
+
+// compornent
+// -----------------------------------
+@import "_component/_form";
+/*
+@import "_compornent/_link";
+@import "_compornent/_title";
+@import "_compornent/_button";
+@import "_compornent/_field";
+@import "_compornent/_section";
+@import "_compornent/_icon";
+@import "_compornent/_search";
+@import "_compornent/_list";
+@import "_compornent/_tag";
+*/

@@ -1,0 +1,31 @@
+  <div class="footer-logo">
+    <a href="/">
+      <img src="/images/common/sitelogo.png" alt="{{global.site.sitename}}">
+    </a>
+  </div>
+  <div class="footer-nav footer-nav1">
+    <nav>
+      <ul>
+        {% for item in global.nav.footer1 %}
+        <li>
+          <a href="#">{{item.label}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-nav footer-nav2">
+    <nav>
+      <ul>
+        {% for item in global.nav.footer2 %}
+        <li>
+          <a href="#">{{item.label}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="footer-copyrights">
+    <p>{{global.site.copyrights}}<br class="pc-none">All Rights Reserved. 不許複製 無断転載</p>
+  </div>
+

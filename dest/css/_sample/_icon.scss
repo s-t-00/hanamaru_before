@@ -1,0 +1,32 @@
+/* ----------------------------------------------------------------
+icon
+-------------------------------------------------------------------*/
+%get-icon {
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    background-image: url($spritesheet-image);
+    background-size: ($spritesheet-width / 2) ($spritesheet-height / 2);
+}
+
+// bulma override
+.icon {
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+.icon-item {
+    @extend %get-icon;
+    &[class*="--pc"] {
+        @include tablet {
+            display: none;
+        }
+    }
+    &[class*="--sp"] {
+        @include desktop {
+            display: none;
+        }
+    }
+}
+//# sourceMappingURL=../sourcemaps/_sample/_icon.scss.map

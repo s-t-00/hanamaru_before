@@ -1,0 +1,161 @@
+/* ----------------------------------------------------------------
+field
+-------------------------------------------------------------------*/
+.field {
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+        &:not(.is-line) {
+            margin-bottom: 20px;
+            .field-body & {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.is-line {
+        margin: 0;
+        padding: 20px 0;
+        border: 1px solid #dbe8ff;
+        border-width: 1px 0;
+        margin-bottom: -1px;
+        .title-02 + & {
+            margin-top: -40px;
+            border-top: 0;
+        }
+        &.is-last,
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+        &.is-date {
+            &:not(:last-child):not(.is-line) {
+                margin-bottom: 10px;
+            }
+            .field-label {
+                min-width: 6em;
+                max-width: 6em;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .field {
+        .field-label {
+            min-width: 8em;
+            max-width: 8em;
+        }
+        &.is-label-min {
+            .field-label {
+                min-width: 4em;
+                max-width: 4em;
+            }
+        }
+        &.is-col02-mobile {
+            flex-direction: column;
+            & > * {
+                margin-right: 0 !important;
+                &:not(:last-child) {
+                    margin-bottom: 20px !important;
+                    margin-right: 0 !important;
+                }
+            }
+            &.is-line {
+                & > .is-input:not(:first-child) {
+                    border-top: 1px solid #dbe8ff;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@include touch {
+    .field {
+        &.is-line {
+            .title-02 + & {
+                margin-top: -20px;
+            }
+            .field-label {
+                margin-bottom: 0;
+            }
+        }
+        &.is-date {
+            font-size: 12px;
+
+            .field-label {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.is-input-full-mobile {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 0.5em !important;
+        }
+        .control.is-input {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+    }
+    &.is-col02-mobile {
+        & > * {
+            width: calc(50% - 0.365rem);
+            flex-shrink: initial !important;
+        }
+    }
+}
+
+// body
+// -----------------------------------
+.field-body {
+    flex: auto;
+    .buttons-bottom-mobile {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 40;
+        background: #ffffff;
+        &-list {
+            display: flex;
+            align-items: center;
+            align-items: stretch;
+            & > * {
+                position: relative;
+                height: 60px;
+                background-color: $primary;
+                flex: 1;
+                & + * {
+                    border-left: #4b61b2 1px solid;
+                }
+                &.control {
+                    display: flex;
+                    height: 100%;
+                    & > .select,
+                    & > .select select {
+                        height: 60px;
+                        width: 100%;
+                    }
+                }
+            }
+            option {
+                background: red;
+            }
+            .i {
+                position: absolute;
+                left: 15px;
+            }
+            .is-sort .select:not(.is-multiple):not(.is-loading)::after {
+                border-color: #fff;
+            }
+            * {
+                color: #fff !important;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    }
+    display: block;
+}
+//# sourceMappingURL=../sourcemaps/_sample/_field.scss.map

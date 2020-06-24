@@ -1,0 +1,28 @@
+@include touch {
+  .header, .main, .footer, .box-wrapper {
+    width: 100%;
+    height: auto;
+    min-width: $content-layout-sp-width;
+  }
+  .box-wrapper {
+    display: block;
+    position: relative;
+    .box-inner {
+      min-width: $content-layout-sp-width;
+      margin: 0 auto;
+    }
+  }
+  .header::after, .main::after, .footer::after, .box-wrapper::after {
+    @include clearfix;
+  }
+}
+
+@include desktop {
+  .header, .main, .footer, .box-wrapper {
+    min-width: $content-layout-width;
+  }
+  .box-inner {
+    width: $content-layout-width;
+  }
+}
+

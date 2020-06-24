@@ -1,0 +1,28 @@
+  <nav class="box-wrapper" role="navigation" aria-label="main navigation">
+    <div class="box-inner">
+      <div class="header-logo">
+          {% if (page.name == 'index') %}<h1>{% else %}<p>{% endif %}
+            <a href="/" class="header-site-logo"><img src="/images/common/sitelogo.png" alt="{{global.site.sitename}}"></a>
+          {% if (page.name == 'index') %}</h1>{% else %}</p>{% endif %}
+        <a href="javascript:;" class="navbar-opener"></a>
+      </div>
+      <div class="navbar-block">
+        <ul class="navbar">
+          {% for item in global.nav.header %}
+          <li class="{{item. class}}">
+            <a href="#">
+              <span>
+                {{item.label}}
+              </span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="header-concept box-wrapper" role="complementary" area-label="終活に関する不安、お悩みを専門家が無料でアドバイスします。">
+    <div class="box-inner">
+      <p>終活に関する不安、お悩みを<br class="pc-none">専門家が無料でアドバイスします。<br class="pc-none"><span>まずは「節税簡単クイック診断」をチェック！</span></p>
+    </div>
+  </section>

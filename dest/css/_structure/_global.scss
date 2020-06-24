@@ -1,0 +1,36 @@
+// ----------------------------------------------------------------
+// サイト基本設計
+// ----------------------------------------------------------------
+/* ----------------------------------------------------------------
+Setting
+-------------------------------------------------------------------*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+@include desktop {
+  .is_notTouchDevice a:hover {
+    opacity: .8;
+  }
+}
+
+@include touch {
+  .input,
+  .textarea,
+  .select select {
+      border-radius: 2px;
+      height: $control-height-mobile;
+  }
+}
+//# sourceMappingURL=../sourcemaps/_structure/_global.scss.map

@@ -1,0 +1,78 @@
+// ----------------------------------------------------------------
+// footer
+// ----------------------------------------------------------------
+@include touch {
+  .footer {
+    background-color: $color-gray;
+    padding-bottom: calc(100% * #{$sticky-banner-height} / #{$sticky-banner-width});
+    .footer-logo {
+      text-align: center;
+      padding: 20px 0;
+      img {
+        width: 200px;
+        height: auto;
+      }
+    }
+    .footer-nav {
+      padding: 12px 0;
+      margin: 0 auto;
+      ul {
+        display: table;
+        margin: 0 auto;
+        li {
+          display: block;
+        }
+        li a {
+          color: inherit;
+        }
+      }
+      &.footer-nav1 {
+        width: 90%;
+        border-top: 1px solid $color-blue;
+        border-bottom: 1px solid $color-blue;
+        li {
+          color: $color-blue;
+          @include font-line-height(18, 36);
+        }
+      }
+      &.footer-nav2 {
+        li {
+          @include font-line-height(14, 36);
+        }
+      }
+      li::before {
+        @include list-icon("■");
+      }
+    }
+    .footer-copyrights {
+      @include font-line-height(12, 16);
+      padding: 0 0 10px;
+      text-align: center;
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    padding-bottom: 0;
+    .footer-logo {
+      padding: 30px 0;
+    }
+    .footer-nav {
+      padding: 0;
+      ul li {
+        padding-right: 10px;
+        display: table-cell;
+      }
+      &.footer-nav1 {
+        width: 610px;
+        border-top: none;
+        border-bottom: none;
+        padding-bottom: 10px;
+      }
+    }
+    .footer-copyrights {
+      padding: 20px 0 30px;
+    }
+  }
+}

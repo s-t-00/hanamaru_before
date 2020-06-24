@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["_setting/_mixin.scss"],"sourcesContent":["// media query\r\n// -----------------------------------\r\n@mixin desktop () {\r\n  @media #{map-get($breakpoints, \"pc\")} {\r\n    @content;\r\n  }\r\n}\r\n\r\n@mixin touch () {\r\n  @media #{map-get($breakpoints, \"sp\")} {\r\n    @content;\r\n  }\r\n}"],"file":"_setting/_mixin.scss"}

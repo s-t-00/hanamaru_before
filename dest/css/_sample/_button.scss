@@ -1,0 +1,58 @@
+// ----------------------------------------------------------------
+// button
+// * override bulma button
+// ----------------------------------------------------------------
+// list
+// -----------------------------------
+
+.button {
+    &.is-grd {
+        min-width: 276px;
+        height: 62px;
+        border-radius: 31px;
+        color: #ffffff;
+        letter-spacing: 0.9px;
+        border: none;
+        font-size: 16px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        background-color: $primary-dark;
+        &::before,
+        &::after {
+            transition: all linear 0.1s;
+            opacity: 1;
+        }
+        &::after {
+            content: "";
+            display: inline-block;
+            @extend %get-icon;
+            position: absolute;
+            right: 15px;
+        }
+        @include touch {
+            font-size: 15px;
+            letter-spacing: 0.73px;
+        }
+        &:hover {
+            background-color: $primary;
+        }
+        &.is-color-2{
+            background-color: $green-dark;
+            &:hover{
+                @include desktop{
+                    background-color: $green; 
+                }               
+            }   
+        }
+        &.is-color-3{
+            background-color: $secondary-dark;
+            &:hover{
+                @include desktop{
+                    background-color: $secondary;   
+                }             
+            }   
+        }
+    }
+}
+//# sourceMappingURL=../sourcemaps/_sample/_button.scss.map

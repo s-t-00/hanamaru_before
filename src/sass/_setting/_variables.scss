@@ -1,0 +1,30 @@
+$breakpoints: (
+  'touch': 'all',
+  'sp': 'all and (max-width: 360px)',
+  'pc': 'all and (min-width: 769px)',
+) !default;
+
+// COMMON
+$font-color: #707070;
+$color-pink: #EF8971;
+$color-green: #98BF29;
+$color-blue: #A0DDCC;
+$color-white: #ffffff;
+$color-gray: #F7F7F7;
+$color-cream: #FFFFE3;
+
+$body-family: "HiraKakuPro-W3", "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN W3", YuGothic, "游ゴシック", "メイリオ", "Meiryo",
+    "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
+$body-line-height: 1.5;
+$content-layout-width: 1000px;
+// $content-layout-sp-width: 375px;
+$content-layout-sp-width: 320px;
+
+// sticky banner
+$sticky-banner-width: 375;
+$sticky-banner-height: 190;
+
+// form control
+$control-height: 30px;
+$control-height-mobile: 45px;
