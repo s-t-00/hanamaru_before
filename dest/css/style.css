@@ -356,6 +356,10 @@ header
   .form-control input[type=text]:focus, .form-control input[type=number]:focus, .form-control input[type=email]:focus, .form-control input[type=tel]:focus, .form-control input[type=password]:focus {
     outline-color: #EF8971;
   }
+  .form-control input[type=text]:disabled, .form-control input[type=number]:disabled, .form-control input[type=email]:disabled, .form-control input[type=tel]:disabled, .form-control input[type=password]:disabled {
+    border: 1px solid #C1C1C1;
+    background-color: #F7F7F7;
+  }
   /* ラジオボタン系インプット */
   .form-control-radio {
     width: 50%;
@@ -391,6 +395,10 @@ header
   }
   .form-control-radio input[type=radio]:checked + span, .form-control-radio input[type=checkbox]:checked + span {
     border-width: 8px;
+  }
+  .form-control-radio input[type=radio]:disabled + span, .form-control-radio input[type=checkbox]:disabled + span {
+    border: 1px solid #C1C1C1;
+    background-color: #F7F7F7;
   }
   /* ボタン系インプット */
   .form-control-button input[type=submit], .form-control-button button {

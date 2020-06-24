@@ -35,6 +35,10 @@
       &:focus {
         outline-color: $color-pink;
       }
+      &:disabled {
+        border: 1px solid $color-disabled;
+        background-color: $color-gray;
+      }
     }
   }
   /* ラジオボタン系インプット */
@@ -70,6 +74,10 @@
       }
       &:checked + span {
         border-width: 8px;
+      }
+      &:disabled + span {
+        border: 1px solid $color-disabled;
+        background-color: $color-gray;
       }
     }
   }
