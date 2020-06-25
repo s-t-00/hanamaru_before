@@ -1,0 +1,19 @@
+@include touch {
+  .title-with-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include font-size(28);
+    &::before, &::after {
+      border-top: 1px solid $color-green;
+      content: "";
+      width: calc((100% - 8em) / 2);
+    }
+    &::before {
+      margin-right: 1em;
+    }
+    &::after {
+      margin-left: 1em;
+    }
+  }
+}

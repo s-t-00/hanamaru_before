@@ -3,6 +3,7 @@
 // ----------------------------------------------------------------
 @import "_setting/_variables";
 @import "_setting/_mixin";
+@import "_component/title";
 
 @include touch {
   .headBase {
@@ -261,6 +262,42 @@
       }
     }
   }
+  
+  // section06
+  .top-section06 {
+    h3 {
+      @extend .title-with-border;
+    }
+    ul {
+      li {
+        width: 86%;
+        display: block;
+        margin: 0 auto;
+        &:not(:last-of-type)::after {
+          content: "";
+          width: 53px;
+          height: 53px;
+          background-image: url(/images/top/sec06-icon01.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin: 0 auto;
+          display: block;
+        }
+        p {
+          padding: 1.25em 0;
+        }
+      }
+    }
+    .top-sec06-video {
+      display: table;
+      margin: 0 auto;
+      p {
+        @include font-size(20);
+        text-align: left;
+        margin: 40px 0 10px;
+      }
+    }
+  }
 }
 
 @include desktop {
@@ -457,6 +494,36 @@
     h3 span {
       @include font-size(20);
       padding: 4px 40px;
+    }
+  }
+
+  
+  // section06
+  .top-section06 {
+    ul {
+      li {
+        width: 30%;
+        display: block;
+        margin: 0;
+        float: left;
+        position: relative;
+        &:not(:last-of-type)::after {
+          transform: rotate(-90deg);
+          position: absolute;
+          right: -48px;
+          top: 114px;
+          z-index: 10;
+        }
+        &:nth-child(2) {
+          margin: 0 5%;
+        }
+      }
+    }
+    .top-sec06-video {
+      .top-sec06-video-item {
+        display: table-cell;
+        padding: 0 40px;
+      }
     }
   }
 }

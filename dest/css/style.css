@@ -444,6 +444,24 @@ header
     text-align: left;
     margin-top: 10px;
   }
+  .title-with-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+  .title-with-border::before, .title-with-border::after {
+    border-top: 1px solid #98BF29;
+    content: "";
+    width: calc((100% - 8em) / 2);
+  }
+  .title-with-border::before {
+    margin-right: 1em;
+  }
+  .title-with-border::after {
+    margin-left: 1em;
+  }
 }
 
 @media all and (min-width: 769px) {

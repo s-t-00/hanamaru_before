@@ -1,4 +1,22 @@
 @media all {
+  .title-with-border, .top-section06 h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-size: 1.75rem;
+  }
+  .title-with-border::before, .top-section06 h3::before, .title-with-border::after, .top-section06 h3::after {
+    border-top: 1px solid #98BF29;
+    content: "";
+    width: calc((100% - 8em) / 2);
+  }
+  .title-with-border::before, .top-section06 h3::before {
+    margin-right: 1em;
+  }
+  .title-with-border::after, .top-section06 h3::after {
+    margin-left: 1em;
+  }
   .headBase, .top-section03 h3, .top-section03 .top-sec03-result, .top-section04 .top-sec04-result {
     width: 90%;
     background-color: #FFFFE3;
@@ -240,6 +258,34 @@
   .top-section05 ul li:nth-child(even) {
     color: #BCBCBC;
   }
+  .top-section06 ul li {
+    width: 86%;
+    display: block;
+    margin: 0 auto;
+  }
+  .top-section06 ul li:not(:last-of-type)::after {
+    content: "";
+    width: 53px;
+    height: 53px;
+    background-image: url(/images/top/sec06-icon01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    display: block;
+  }
+  .top-section06 ul li p {
+    padding: 1.25em 0;
+  }
+  .top-section06 .top-sec06-video {
+    display: table;
+    margin: 0 auto;
+  }
+  .top-section06 .top-sec06-video p {
+    font-size: 20px;
+    font-size: 1.25rem;
+    text-align: left;
+    margin: 40px 0 10px;
+  }
 }@media all and (min-width: 769px) {
   .main .box-inner {
     padding: 20px 0;
@@ -429,6 +475,27 @@
     font-size: 20px;
     font-size: 1.25rem;
     padding: 4px 40px;
+  }
+  .top-section06 ul li {
+    width: 30%;
+    display: block;
+    margin: 0;
+    float: left;
+    position: relative;
+  }
+  .top-section06 ul li:not(:last-of-type)::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: -48px;
+    top: 114px;
+    z-index: 10;
+  }
+  .top-section06 ul li:nth-child(2) {
+    margin: 0 5%;
+  }
+  .top-section06 .top-sec06-video .top-sec06-video-item {
+    display: table-cell;
+    padding: 0 40px;
   }
 }@media all and (max-width: 360px) {
   .top-section01 h2 img.pc-none {
