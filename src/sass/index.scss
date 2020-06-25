@@ -5,10 +5,25 @@
 @import "_setting/_mixin";
 
 @include touch {
+  .headBase {
+    width: 90%;
+    background-color: $color-cream;
+    border: 5px solid $color-pink;
+    border-radius: 20px;
+    text-align: center;
+    @include font-line-height(20, 30);
+    color: $color-pink;
+    padding: .5em 0 .25em;
+    margin: 0 auto;
+  }
+
+  .main .box-inner {
+    padding: 20px;
+  }
+
   // section01
   .top-section01 {
     background-color: $color-cream;
-    padding: 2rem 1rem;
     h2 img.pc-none {
       width: 55%;
       margin: 0 auto 1rem;
@@ -29,10 +44,10 @@
       }
     }
     .form-control-radio:first-of-type {
-      width: 65%;
+      width: 70%;
     }
     .form-control-radio:last-of-type {
-      width: 35%;
+      width: 30%;
     }
     .form-control-text {
       input {
@@ -51,9 +66,10 @@
     }
   }
 
-  // section02
-  .top-section02 {
-    background-color: $color-gray;
+  .top-section02-image {
+    .box-inner {
+      padding: 0;
+    }
     h3 {
       width: 100%;
       height: 280px;
@@ -75,16 +91,19 @@
         z-index: 10;
       }
     }
+  }
+
+  // section02
+  .top-section02 {
+    background-color: $color-gray;
     .top-sec02-text-left {
-      padding: 20px;
-      h4 {
+      h3 {
         @include font-size(22);
         text-indent: 1em;
         margin-bottom: .5em;
       }
     }
     .top-sec02-text-right {
-      width: 370px;
       margin: 0 auto;
       text-align: center;
       p {
@@ -105,15 +124,15 @@
       display: block;
       padding: 20px 0 30px;
       img {
-        max-height: 167px;
+        width: 54%;
       }
     }
   }
 
   // section03
   .top-section03 {
-    .box-inner {
-      padding: 30px 10px;
+    h3, .top-sec03-result {
+      @extend .headBase;
     }
     h3, .top-sec03-result {
       width: 88%;
@@ -121,10 +140,9 @@
       border: 5px solid $color-pink;
       border-radius: 20px;
       text-align: center;
-      @include font-line-height(22, 22);
       color: $color-pink;
       padding: .5em 0 .25em;
-      margin: 0 auto;
+      margin: 30px auto 20px;
     }
     .top-sec03-specialties {
       margin: 1em 0;
@@ -171,15 +189,85 @@
         color: $color-white;
         background-color: $color-pink;
         padding: 20px 0;
+        margin: 0 auto;
         @include line-height(22, 30);
+      }
+    }
+  }
+
+  // section04
+  .top-section04 {
+    background-color: $color-cream;
+    text-align: center;
+    h3 {
+      color: $color-pink;
+      @include font-line-height(20, 30);
+      margin: 20px 0 0;
+    }
+    img {
+      width: 200px;
+      margin-top: 50px;
+    }
+    h4 {
+      @include font-line-height(20, 26);
+      margin: 20px 0;
+    }
+    p {
+      text-align: left;
+      @include line-height(16, 24);
+    }
+    .top-sec04-result {
+      @extend .headBase;
+      width: 100%;
+      background-color: $color-white;
+      padding: 8px 0;
+      margin: 40px 0 30px;
+    }
+  }
+
+  // section05
+  .top-section05 {
+    border-top: 1px solid $color-pink;
+    .box-inner {
+      padding: 0 20px 20px;
+    }
+    h3 {
+      margin: 0 0 20px;
+      text-align: center;
+    }
+    h3 span {
+      background-color: $color-pink;
+      color: $color-white;
+      @include font-size(16);
+      padding: 4px 8px;
+      display: inline-block;
+    }
+    ul {
+      padding: 0 10px;
+      li {
+        margin: 0 0 .75em;
+        display: table;
+        span, p {
+          display: table-cell;
+          vertical-align: top;
+        }
+        span {
+          width: 6em;
+          margin-right: .5em;
+        }
+        &:nth-child(even) {
+          color: #BCBCBC;
+        }
       }
     }
   }
 }
 
 @include desktop {
+  .main .box-inner {
+    padding: 20px 0;
+  }
   .top-section01 {
-    padding: 1.25rem 0 2rem;
     h2 img.sp-none {
       height: 59px;
       margin: 0 auto .5rem;
@@ -239,9 +327,11 @@
     }
   }
 
-  // section02
-  .top-section02 {
+  .top-section02-image {
     padding: 0;
+    .box-inner {
+      padding: 0;
+    }
     h3 {
       width: 100%;
       height: 300px;
@@ -250,6 +340,10 @@
         @include font-size(28);
       }
     }
+  }
+
+  // section02
+  .top-section02 {
     .top-sec02-text-wrapper {
       width: 100%;
       justify-content: space-between;
@@ -261,21 +355,25 @@
       width: 400px;
       @include font-size(15);
       padding-bottom: 40px;
-      h4 {
+      h3 {
         @include font-size(28);
         text-indent: 0;
       }
     }
     .top-sec02-text-right {
+      width: 370px;
       margin: 0 0 0 auto;
     }
     .top-sec02-character {
-      left: 400px;
+      left: 410px;
       bottom: 0;
       width: auto;
       display: inline-block;
       position: absolute;
       z-index: 10;
+      img {
+        width: 210px;
+      }
     }
   }
 
@@ -283,6 +381,8 @@
     h3 {
       width: 100%;
       @include font-size(28);
+      padding: 4px 0;
+      margin: 20px 0;
     }
     .top-sec03-specialties {
       p {
@@ -310,13 +410,54 @@
         clear: both;
       }
       .top-sec03-result {
+        width: 100%;
         text-align: center;
         padding: 6px 0;
       }
     }
+  }
 
+  .top-section04 {
+    h3 {
+      @include font-size(28);
+    }
+    .box-inner div {
+      width: 30%;
+      padding: 0 0 50px;
+      display: block;
+      float: left;
+      &.top-sec04-service02 {
+        margin: 0 5%;
+      }
+      &.top-sec04-service03::after {
+        @include clearfix;
+      }
+      h4 {
+        color: $color-dark-gray;
+        @include font-line-height(18, 26);
+        margin: 30px 0;
+      }
+    }
+    .top-sec04-result {
+      clear: both;
+    }
+  }
 
-    
+  // section05
+  .top-section05 {
+    .box-inner {
+      padding: 0 20px 20px;
+    }
+    ul {
+      padding: 0;
+    }
+    h3 {
+      text-align: left;
+    }
+    h3 span {
+      @include font-size(20);
+      padding: 4px 40px;
+    }
   }
 }
 
