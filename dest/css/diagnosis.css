@@ -1,0 +1,254 @@
+@media all {
+  .diagnosis-section01 {
+    text-align: center;
+    margin: 0 auto 76px;
+    position: relative;
+  }
+  .diagnosis-section01::after {
+    display: block;
+    position: absolute;
+    bottom: -56px;
+    width: 100%;
+    height: 56px;
+    background: url(../images/diagnosis/diagnosis-bg-sp.jpg) no-repeat 50% 50%;
+    background-size: contain;
+  }
+  .diagnosis-section01 .diagnosis-result {
+    padding: 20px 20px 0;
+    background-color: #F7F7F7;
+    width: 100%;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-title {
+    margin: 0 auto;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-title h2 {
+    font-size: 22px;
+    font-size: 1.375rem;
+    margin-bottom: 10px;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #EF8971;
+    margin-top: 10px;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl.main-price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl.main-price dt {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl.main-price dd {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    color: #EF8971;
+    font-size: 34px;
+    font-size: 2.125rem;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl.main-price dd span {
+    color: #707070;
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl.sub-price:last-child {
+    border-bottom: none;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl.sub-price dt {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl.sub-price dd {
+    color: #707070;
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+  .diagnosis-section01 .diagnosis-sec01-price dl.sub-price dd span {
+    color: #707070;
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  .diagnosis-section02 {
+    margin-bottom: 60px;
+  }
+  .diagnosis-section02 .diagnosis-sec02-title {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .diagnosis-section02 .diagnosis-sec02-title h2 {
+    font-size: 30px;
+    font-size: 1.875rem;
+    margin-bottom: 10px;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point {
+    margin: 0 auto;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point ul {
+    width: calc(100% - 50px);
+  }
+  .diagnosis-section02 .diagnosis-sec02-point ul li {
+    color: #98BF29;
+    height: 90px;
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid #98BF29;
+    border-right: none;
+    position: relative;
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point ul li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -63px;
+    top: -3px;
+    width: 64px;
+    height: 63px;
+    -webkit-transform-origin: left top;
+    -webkit-transform: rotate(45deg);
+    -moz-transform-origin: left top;
+    -moz-transform: rotate(45deg);
+    transform-origin: left top;
+    transform: rotate(45deg);
+    background: #ffffff;
+    border-width: 3px;
+    border-style: solid;
+    border-left: none;
+    border-bottom: none;
+    z-index: -1;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point .regist-button {
+    margin: 30px auto 0;
+    text-align: center;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point .regist-button img {
+    width: 282px;
+  }
+}@media all and (min-width: 769px) {
+  .diagnosis-section01 {
+    margin: 0 auto 152px;
+  }
+  .diagnosis-section01::after {
+    bottom: -112px;
+    width: 100%;
+    height: 112px;
+    background: url(../images/diagnosis/diagnosis-bg-pc.jpg) no-repeat 50% 50%;
+  }
+  .diagnosis-section01 .diagnosis-result {
+    width: 1000px;
+    padding: 40px 40px 0;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-title h2 {
+    font-size: 34px;
+    font-size: 2.125rem;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #EF8971;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl dt {
+    text-align: left;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl dd {
+    text-align: right;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl.main-price dt {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    font-size: 50px;
+    font-size: 3.125rem;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl.main-price dd {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    color: #EF8971;
+    font-size: 80px;
+    font-size: 5rem;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl.main-price dd span {
+    color: #707070;
+    font-size: 50px;
+    font-size: 3.125rem;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl.sub-price:last-child {
+    border-bottom: none;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl.sub-price dt {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl.sub-price dd {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    color: #707070;
+    font-size: 50px;
+    font-size: 3.125rem;
+  }
+  .diagnosis-section01 .diagnosis-result .diagnosis-sec01-price dl.sub-price dd span {
+    color: #707070;
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+  .diagnosis-section02 {
+    margin-bottom: 100px;
+  }
+  .diagnosis-section02 .diagnosis-sec02-title h2 {
+    font-size: 34px;
+    font-size: 2.125rem;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point {
+    width: 1000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point ul {
+    -ms-flex-preferred-size: 698px;
+        flex-basis: 698px;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point ul li {
+    width: 660px;
+    margin: 10px;
+    padding: 10px 30px;
+    height: 60px;
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point ul li::after {
+    content: "";
+    right: -43px;
+    top: -3px;
+    width: 42px;
+    height: 42px;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point .regist-button {
+    margin: 0;
+    -ms-flex-preferred-size: 302px;
+        flex-basis: 302px;
+    text-align: right;
+  }
+  .diagnosis-section02 .diagnosis-sec02-point .regist-button img {
+    width: 282px;
+  }
+}
+/*# sourceMappingURL=sourcemaps/diagnosis.css.map */
