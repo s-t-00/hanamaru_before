@@ -242,6 +242,7 @@
     height: 42px;
   }
   .diagnosis-section02 .diagnosis-sec02-point .regist-button {
+    margin: 0;
     -ms-flex-preferred-size: 302px;
         flex-basis: 302px;
     text-align: right;
