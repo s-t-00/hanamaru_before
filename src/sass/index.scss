@@ -18,10 +18,6 @@
     margin: 0 auto;
   }
 
-  .main .box-inner {
-    padding: 20px;
-  }
-
   // section01
   .top-section01 {
     background-color: $color-cream;
@@ -401,10 +397,6 @@
 }
 
 @include desktop {
-  .main .box-inner {
-    padding: 20px 0;
-  }
-
   .top-section01 {
     h2 img.sp-none {
       height: 59px;

@@ -1,0 +1,16 @@
+@include touch {
+  .breadcrumb {
+    @include font-size(14);
+    ol {
+      list-style: none;
+      li {
+        display: inline;
+        &:not(:last-of-type)::after {
+          content: "\03e";
+          margin: 0 2px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
