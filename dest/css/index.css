@@ -1,8 +1,14 @@
 @media all {
-  .title-with-border, .top-section06 h3, .top-section07 h3, .top-section08 h3 {
+  .title-with-border, .top-section06 h3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 28px;
     font-size: 1.75rem;
   }
@@ -71,7 +77,8 @@
     text-align: right;
   }
   .top-section01 .form-control-button button {
-    box-shadow: 1px 2px 4px gray;
+    -webkit-box-shadow: 1px 2px 4px gray;
+            box-shadow: 1px 2px 4px gray;
   }
   .top-section02-image .box-inner {
     padding: 0;
@@ -436,7 +443,11 @@
   }
   .top-section02 .top-sec02-text-wrapper {
     width: 100%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     padding: 20px 0;
@@ -556,7 +567,8 @@
     position: relative;
   }
   .top-section06 ul li:not(:last-of-type)::after {
-    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
     position: absolute;
     right: -48px;
     top: 114px;
