@@ -4,6 +4,8 @@ node_modules/
 .quarantine/
 .tmb/
 _info/
+dest/css/
+dest/js/
 
 # ignore log files and databases
 *.log
