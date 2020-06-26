@@ -49,11 +49,13 @@ textarea {
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, *::before, *::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 img,
@@ -136,6 +138,7 @@ header
     min-width: 320px;
     font-size: 100%;
     color: #707070;
+    font-family: "HiraKakuPro-W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", YuGothic, "游ゴシック", "メイリオ", "Meiryo", "Meiryo UI", "ＭＳ Ｐゴシック", sans-serif;
   }
   img {
     vertical-align: middle;
@@ -330,9 +333,15 @@ header
   }
   .form-field-content {
     height: calc(2.5rem + 2px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .form-control {
     /* 入力系インプット */
@@ -369,7 +378,8 @@ header
     display: block;
     position: relative;
     padding-left: 2rem;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     cursor: pointer;
   }
   .form-control-radio input[type=radio], .form-control-radio input[type=checkbox] {
@@ -413,7 +423,8 @@ header
     padding: .75rem 0;
     position: relative;
     outline-color: #98BF29;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .is_notTouchDevice .form-control-button input[type=submit]:hover, .is_notTouchDevice .form-control-button input[type=submit]:focus, .is_notTouchDevice .form-control-button button:hover, .is_notTouchDevice .form-control-button button:focus {
     background-color: #EF8971;
