@@ -4,9 +4,22 @@
     "css": "true",
     "title": "マイページ診断 | "
 } %}
+{% set breadcrumb_list = [
+  {
+    "url": "/",
+    "text": "ホーム"
+  }, {
+    "url": "",
+    "text": "マイページ診断"
+  }
+] %}
 {% block content %}
 
 <section class="box-wrapper my-diag-section01">
+  <div class="box-inner">
+  {% include '_breadcrumb.html' %}
+  
+  </div>
 </section>
 
 {% endblock %}

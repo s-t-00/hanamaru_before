@@ -4,9 +4,22 @@
     "css": "true",
     "title": "問題点詳細 | "
 } %}
+{% set breadcrumb_list = [
+  {
+    "url": "/",
+    "text": "ホーム"
+  }, {
+    "url": "",
+    "text": "問題点詳細"
+  }
+] %}
 {% block content %}
 
 <section class="box-wrapper my-td-section01">
+  <div class="box-inner">
+  {% include '_breadcrumb.html' %}
+  
+  </div>
 </section>
 
 {% endblock %}>

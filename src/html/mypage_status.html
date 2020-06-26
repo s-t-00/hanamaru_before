@@ -4,9 +4,22 @@
     "css": "true",
     "title": "ステータス確認 | "
 } %}
+{% set breadcrumb_list = [
+  {
+    "url": "/",
+    "text": "ホーム"
+  }, {
+    "url": "",
+    "text": "ステータス確認"
+  }
+] %}
 {% block content %}
 
 <section class="box-wrapper my-st-section01">
+  <div class="box-inner">
+  {% include '_breadcrumb.html' %}
+  
+  </div>
 </section>
 
 {% endblock %}

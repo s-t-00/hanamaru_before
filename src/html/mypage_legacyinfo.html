@@ -4,9 +4,22 @@
     "css": "true",
     "title": "相続予定財産情報 | "
 } %}
+{% set breadcrumb_list = [
+  {
+    "url": "/",
+    "text": "ホーム"
+  }, {
+    "url": "",
+    "text": "相続予定財産情報"
+  }
+] %}
 {% block content %}
 
 <section class="box-wrapper my-leg-section01">
+  <div class="box-inner">
+  {% include '_breadcrumb.html' %}
+  
+  </div>
 </section>
 
 {% endblock %}
