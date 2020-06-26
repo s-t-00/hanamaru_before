@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["_sample/_nav.scss"],"sourcesContent":["\r\nul {\r\n  display: table;\r\n}\r\n\r\nli {\r\n  display: table-cell;\r\n}"],"file":"_sample/_nav.scss"}

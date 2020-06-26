@@ -598,7 +598,7 @@ header
     /* 入力系インプット */
   }
   .form-control input[type=text], .form-control input[type=number], .form-control input[type=email], .form-control input[type=tel], .form-control input[type=password] {
-    margin-left: .35rem;
+    margin-left: .5rem;
     padding: .375rem;
   }
 }
