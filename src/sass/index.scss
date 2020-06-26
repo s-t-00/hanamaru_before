@@ -366,7 +366,7 @@
 
   // section09
   .top-section09 {
-    border-top: 1px solid $color-pink;
+    border-top: 1px solid $color-blue;
     .box-inner {
       padding: 0 20px 20px;
     }
@@ -375,11 +375,27 @@
       text-align: center;
     }
     h3 span {
-      background-color: $color-pink;
+      background-color: $color-blue;
       color: $color-white;
       @include font-size(16);
       padding: 4px 8px;
       display: inline-block;
+    }
+    ul {
+      li {
+        display: block;
+        margin: 0 0 20px;
+        img {
+          height: 30px;
+        }
+        &:last-of-type {
+          text-align: center;
+          margin: 30px 0 40px;
+          img {
+            height: 100px;
+          }
+        }
+      }
     }
   }
 }
@@ -653,6 +669,7 @@
           background-size: contain;
           display: block;
           position: absolute;
+          z-index: 10;
         }
       }
       &:last-of-type::after {
@@ -661,6 +678,34 @@
     }
     p {
       text-align: center;
+    }
+  }
+
+  // section09
+  .top-section09 {
+    .box-inner {
+      padding: 0 20px 20px;
+    }
+    h3 {
+      text-align: left;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      li {
+        margin: 0;
+        img {
+          height: 35px;
+        }
+        &:last-of-type {
+          text-align: right;
+          margin: 0;
+          img {
+            height: 100px;
+          }
+        }
+      }
     }
   }
 }
