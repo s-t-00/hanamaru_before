@@ -1,5 +1,5 @@
 @media all {
-  .title-with-border, .top-section06 h3 {
+  .title-with-border, .top-section06 h3, .top-section07 h3, .top-section08 h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -305,12 +305,17 @@
     width: calc((100% - 15em) / 2);
   }
   .top-section07 ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .top-section07 li {
-    flex-basis: 40%;
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -586,10 +591,13 @@
     font-size: 1.75rem;
   }
   .top-section07 ul {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .top-section07 ul li {
-    flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
   }
   .top-section07 ul li img {
     width: 200px;
@@ -599,24 +607,35 @@
     font-size: 1.75rem;
   }
   .top-section08 .top-sec08-ranking {
-    width: 40%;
+    width: 45%;
     max-width: inherit;
     margin: 40px 0;
     padding: 10px;
-    display: table;
+    display: block;
     float: left;
   }
   .top-section08 .top-sec08-ranking:first-of-type {
-    margin-right: 20%;
+    margin-right: 10%;
+  }
+  .top-section08 .top-sec08-ranking:first-of-type::after {
+    content: "";
+    bottom: 80px;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    background-image: url(/images/top/sec08-ill01.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
   }
   .top-section08 .top-sec08-ranking:last-of-type::after {
     content: "";
     display: table;
     clear: both;
   }
-  .top-section08 .top-sec08-ranking ul li {
-    width: 100%;
-    margin: 30px 0 0;
+  .top-section08 p {
+    text-align: center;
   }
 }@media all and (max-width: 360px) {
   .top-section01 h2 img.pc-none {

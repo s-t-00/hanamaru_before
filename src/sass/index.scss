@@ -633,24 +633,33 @@
       @include font-size(28);
     }
     .top-sec08-ranking {
-      width: 40%;
+      width: 45%;
       max-width: inherit;
       margin: 40px 0;
       padding: 10px;
-      display: table;
+      display: block;
       float: left;
       &:first-of-type {
-        margin-right: 20%;
+        margin-right: 10%;
+        &::after {
+          content: "";
+          bottom: 80px;
+          left: calc(50% - 100px);
+          width: 200px;
+          height: 200px;
+          background-image: url(/images/top/sec08-ill01.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          position: absolute;
+        }
       }
       &:last-of-type::after {
         @include clearfix;
       }
-      ul {
-        li {
-          width: 100%;
-          margin: 30px 0 0;
-        }
-      }
+    }
+    p {
+      text-align: center;
     }
   }
 }
