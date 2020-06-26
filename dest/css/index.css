@@ -35,7 +35,8 @@
     text-align: right;
   }
   .top-section01 .form-control-button button {
-    box-shadow: 1px 2px 4px gray;
+    -webkit-box-shadow: 1px 2px 4px gray;
+            box-shadow: 1px 2px 4px gray;
   }
   .top-section02 {
     background-color: #F7F7F7;
@@ -239,7 +240,11 @@
   }
   .top-section02 .top-sec02-text-wrapper {
     width: 100%;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     padding: 20px 0;
