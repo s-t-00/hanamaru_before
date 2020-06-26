@@ -1,1 +1,0 @@
-{"version":3,"names":[],"mappings":"","sources":["_structure/_header.scss"],"sourcesContent":["/* ----------------------------------------------------------------\r\nheader\r\n-------------------------------------------------------------------*/\r\n.header .block-inner {\r\n  padding: 20px 0;\r\n}\r\n\r\n\r\n"],"file":"_structure/_header.scss"}
