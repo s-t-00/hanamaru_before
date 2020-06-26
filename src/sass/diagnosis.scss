@@ -1,0 +1,236 @@
+// ----------------------------------------------------------------
+// topページ専用
+// ----------------------------------------------------------------
+@import "_setting/_variables";
+@import "_setting/_mixin";
+
+@include touch {
+  .diagnosis-section01 {
+    text-align: center;
+    margin: 0 auto 76px;
+    position: relative;
+    &::after{
+      display: block;
+      position: absolute;
+      bottom: -56px;
+      width: 100%;
+      height: 56px;
+      background: url(../images/diagnosis/diagnosis-bg-sp.jpg) no-repeat 50% 50%;
+      background-size: contain;
+    }
+    .diagnosis-result{
+      padding: 20px 20px 0;
+      background-color: $color-gray;
+      width: 100%;
+      .diagnosis-sec01-title {
+        margin: 0 auto;
+        h2{
+          @include font-size(22);
+          margin-bottom: 10px;          
+        }
+      }
+    }
+    .diagnosis-sec01-price{
+      dl{
+        padding-bottom: 10px;
+        border-bottom: 1px solid $color-pink;
+        margin-top: 10px;
+      }
+      dl.main-price{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        dt{
+          flex-basis: 20%;
+          @include font-size(22);
+        }
+        dd{
+          flex-basis: 80%;
+          color: $color-pink;
+          @include font-size(34);
+          span{
+            color: $font-color;
+            @include font-size(22);
+          }
+        }
+      }
+      dl.sub-price{
+        &:last-child{
+          border-bottom: none;
+        }
+        dt{
+          @include font-size(18);
+        }
+        dd{
+          color: $font-color;
+          @include font-size(24);
+          span{
+            color: $font-color;
+            @include font-size(18);
+          }
+        }
+      }
+    }
+  }
+  .diagnosis-section02 {
+    margin-bottom: 60px;
+    .diagnosis-sec02-title {
+      text-align: center;
+      margin: 0 auto;
+      h2{
+        @include font-size(30);
+        margin-bottom: 10px;
+      }
+    }
+    .diagnosis-sec02-point{
+      margin: 0 auto;
+      ul{
+        width: calc(100% - 50px);
+        li{
+          color: $color-green;
+          height: 90px;
+          margin: 10px;
+          padding: 10px;
+          border: 3px solid $color-green;
+          border-right: none;
+          position: relative;
+          @include font-size(22);
+         &::after{
+          content: "";
+          display: block;
+          position: absolute;
+          right: -63px;
+          top: -3px;
+          width: 64px;
+          height: 63px;
+          -webkit-transform-origin: left top;
+          -webkit-transform: rotate(45deg);
+          -moz-transform-origin: left top;
+          -moz-transform: rotate(45deg);
+          transform-origin: left top;
+          transform: rotate(45deg);
+          background: $color-white;
+          border-width: 3px;
+          border-style: solid;
+          border-left: none;
+          border-bottom: none;
+          z-index: -1;
+          }
+         }
+        }
+        .regist-button{
+          margin: 30px auto 0;
+          text-align: center;
+          img{
+            width: 282px;
+          }
+        }
+      }
+    }
+}
+
+@include desktop {
+  .diagnosis-section01 {
+    margin: 0 auto 152px;
+    &::after{
+      bottom: -112px;
+      width: 100%;
+      height: 112px;
+      background: url(../images/diagnosis/diagnosis-bg-pc.jpg) no-repeat 50% 50%;
+    }
+    .diagnosis-result{
+      width: 1000px;
+      padding: 40px 40px 0;
+      .diagnosis-sec01-title {
+        h2{
+          @include font-size(34);
+        }
+      }
+      .diagnosis-sec01-price{
+        dl{
+          display: flex;
+          align-items: center;
+          padding-bottom: 20px;
+          border-bottom: 1px solid $color-pink;
+          flex-wrap: wrap;
+          margin-top: 10px;
+          dt{
+            text-align: left;
+          }
+          dd{
+            text-align: right;
+          }
+        }
+        dl.main-price{
+          dt{
+            flex-basis: 20%;
+            @include font-size(50);
+          }
+          dd{
+            flex-basis: 80%;
+            color: $color-pink;
+            @include font-size(80);
+            span{
+              color: $font-color;
+              @include font-size(50);
+            }
+          }
+        }
+        dl.sub-price{
+          &:last-child{
+            border-bottom: none;
+          }
+          dt{
+            flex-basis: 30%;
+            @include font-size(30);
+          }
+          dd{
+            flex-basis: 70%;
+            color: $font-color;
+            @include font-size(50);
+            span{
+              color: $font-color;
+              @include font-size(30);
+            }
+          }
+        }
+      }
+    }
+  }
+  .diagnosis-section02 {
+    margin-bottom: 100px;
+    .diagnosis-sec02-title {
+      h2{
+        @include font-size(34);
+      }
+    }
+    .diagnosis-sec02-point{
+      width: 1000px;
+      display: flex;
+      ul{
+        flex-basis: 698px;
+        li{
+          width: 660px;
+          margin: 10px;
+          padding: 10px 30px;
+          height: 60px;
+          @include font-size(24);
+         &::after{
+          content: "";
+          right: -43px;
+          top: -3px;
+          width: 42px;
+          height: 42px;
+          }
+         } 
+        }
+        .regist-button{
+          flex-basis: 302px;
+          text-align: right;
+          img{
+            width: 282px;
+          }
+        }
+      }
+    }
+}
