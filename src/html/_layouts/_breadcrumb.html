@@ -1,0 +1,13 @@
+<nav class="breadcrumb" area-label="Breadcrumb">
+  <ol>
+    {% for item in breadcrumb_list %}
+      <li>
+        {% if (item.url == '') %}
+          <span class="current" aria-current="page">{{item.text}}</span>
+        {% else %}
+          <a href="{{item.url}}">{{item.text}}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>
