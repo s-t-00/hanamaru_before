@@ -7,8 +7,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="description" content="">
-<link href="./css/style.css" rel="stylesheet">
-{% if (page.css == 'true') %}<link href="./css/{{page.cssname}}.css" rel="stylesheet">{% endif %}
+<link href="/css/style.css" rel="stylesheet">
+{% for css in page.css %}
+<link href="/css/{{css}}.css" rel="stylesheet">
+{% endfor %}
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
@@ -37,8 +39,9 @@
   </aside>
   <!-- / 診断ボタン -->
 
-  <script src="js/vendor.js"></script>
   <script src="js/common.js"></script>
-
+  {% for js in page.js %}
+  <link href="/js/{{js}}.js" rel="stylesheet">
+  {% endfor %}
 </body>
 </html>

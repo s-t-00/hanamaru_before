@@ -1,9 +1,9 @@
   <nav class="box-wrapper" role="navigation" aria-label="main navigation">
     <div class="box-inner">
       <div class="header-logo">
-          {% if (page.name == 'index') %}<h1>{% else %}<p>{% endif %}
+          {% if (page.top == 'true') %}<h1>{% else %}<p>{% endif %}
             <a href="/" class="header-site-logo"><img src="/images/common/sitelogo.png" alt="{{global.site.sitename}}"></a>
-          {% if (page.name == 'index') %}</h1>{% else %}</p>{% endif %}
+          {% if (page.top == 'true') %}</h1>{% else %}</p>{% endif %}
         <a href="javascript:;" class="navbar-opener"></a>
       </div>
       <div class="navbar-block">
