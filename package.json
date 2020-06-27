@@ -30,10 +30,14 @@
     "gulp-uglify": "^3.0.2",
     "gulp.spritesmith": "^6.11.0"
   },
-"browserslist": [
+  "browserslist": [
     "last 2 version",
     "> 1%",
     "IE 11",
     "not IE < 11"
-  ]
+  ],
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0"
+  }
 }

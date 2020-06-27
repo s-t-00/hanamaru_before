@@ -30,6 +30,7 @@
 -   html の作成・整形
 -   scss から css への Autoprefixer 適用・MediaQury の整列・圧縮
 -   js の結合・圧縮
+-   images の圧縮
 -   上記完了後ブラウザを起動・ファイルの更新を監視・ファイルの変更を検知後ブラウザリロード
 
 ## プロジェクト構成
@@ -38,16 +39,17 @@
 ├── dest ### public  
 │   └── common  
 │   　　 ├── css  
-│   　　 ├── images ### static  
-│   　　 └── js  
+│   　　 ├── images
+│   　　 └── js 
 └── src  
-　　 ├── html  
+　　 ├── html
+　　 └── images
 　　 ├── js  
 　　 ├── js-vendor  
 　　 └── sass
 
 `src`フォルダで作成したファイルは`dest`フォルダにコンパイルされます。  
-css および Javascript はコンパイル時に圧縮されます。（※一旦圧縮は外しています。）  
+css および Javascript　および images はコンパイル時に圧縮されます。（※一旦圧縮は外しています。）  
 ブラウザでの検証時は sourcemap を使用します。  
 `dest`直下の html およびスタイルガイドから`/dest/common/`の内容を参照します。
 
@@ -75,3 +77,7 @@ css および Javascript はコンパイル時に圧縮されます。（※一�
 -   ハイフンつなぎを使用します。
     `.block-element-component`  
     例：`.product-list-item`
+
+### 更新履歴
+2020.06.27　.gitignoreに/dest配下を追加。コンパイルは各自の環境にて実施（コンパイルファイルはGit上で管理しない）
+2020.06.27　gulpに「gulp-imagemin」「gulp-newer」を追加。画像圧縮機能をつけて、src→destに書き出し。
