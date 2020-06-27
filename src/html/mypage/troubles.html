@@ -54,21 +54,22 @@
     </div>
 
     <p>あなたに起こりうる問題点です。それぞれの解決方法をご確認ください。</p>
+  </div>
 
-    <div class="my-tl-box">
+  <div class="box-inner box-inner-no-padding">
+    <div class="my-tl-box my-tl-box1">
       <h3>相続に関すること</h3>
       <ul>
         {% for level, text in legacy_lists %}
-          <li><span class="label-{{level}}"><span></span></span>{{text}}</li>
+          <li><a href="#"><span class="label label-{{level}}"><span></span></span><p>{{text}}</p></a></li>
         {% endfor %}
       </ul>
-
     </div>
-    <div class="my-tl-box">
+    <div class="my-tl-box my-tl-box2">
       <h3>相続以外のこと</h3>
       <ul>
         {% for level, text in others_lists %}
-          <li><span class="label-{{level}}"><span></span></span>{{text}}</li>
+          <li><a href="#"><span class="label label-{{level}}"><span></span></span><p>{{text}}</p></a></li>
         {% endfor %}
       </ul>
 
