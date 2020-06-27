@@ -32,6 +32,12 @@ $(function() {
     var target = "input[type=radio], input[type=checkbox]";
     $(this).siblings(target).prop("checked", true);
   });
+
+  var $number_format = $(".js-numberformat");
+  $number_format.each(function(){
+    var num = $(this).text();
+    $(this).text(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(num));
+  });
 });
 
   /* クイック診断フォーム操作

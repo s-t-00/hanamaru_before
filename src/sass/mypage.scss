@@ -1,0 +1,41 @@
+// ----------------------------------------------------------------
+// マイページ専用
+// ----------------------------------------------------------------
+@import "_setting/_variables";
+@import "_setting/_mixin";
+
+@include touch {
+  .main .box-inner {
+    padding-bottom: 60px;
+  }
+  .mypage-status {
+    ul {
+      width: 100%;
+      display: flex; 
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0;
+      li {
+        text-align: center;
+        flex-basis: 50%;
+        padding: 2px 0;
+        margin: 10px 0;
+        &.current {
+          color: $color-white;
+          background-color: $color-pink;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .mypage-status {
+    ul {
+      flex-wrap: nowrap;
+      li {
+        flex-basis: 25%;
+      }
+    }
+  }
+}
