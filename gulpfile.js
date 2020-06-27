@@ -3,6 +3,7 @@
 /* require module
 --------------------------------------------------------*/
 const { watch, src, dest, series, parallel } = require("gulp");
+const gulp = require("gulp");
 const del = require("delete");
 const plumber = require("gulp-plumber");
 const notify = require("gulp-notify");
@@ -15,12 +16,18 @@ const uglify = require("gulp-uglify");
 const concat = require("gulp-concat");
 const nunjucksRender = require("gulp-nunjucks-render");
 const prettify = require("gulp-prettify");
+const newer = require("gulp-newer"); // ファイルが新しいかどうかをチェックする
+const imagemin = require("gulp-imagemin"); // 画像圧縮
 
 /* setting config
 --------------------------------------------------------*/
 const path = {
     src: __dirname + "/src/",
-    dest: __dirname + "/dest/"
+    dest: __dirname + "/dest/",
+    images: {
+        src: './src/images/**/*.{jpg,jpeg,png,gif,svg}',
+        dest: './dest/images/'
+    }
 };
 
 /* functions
@@ -125,16 +132,26 @@ function wathes(done) {
     done();
 }
 
+function imagesUpdate() {
+  let out = path.images.dest;
+  return gulp.src(path.images.src)
+    .pipe( newer(out) )
+    .pipe( imagemin({ optimizationLevel:5 }) )
+    .pipe( gulp.dest(out) );
+}
+
 /* setting exports
 --------------------------------------------------------*/
 exports.compile = sassComplile;
+exports.img = imagesUpdate;
 exports.default = series(
     cleanMapFiles,
     parallel(
         htmlCompile,
         jsComplile,
         jsComplileVendor,
-        sassComplile
+        sassComplile,
+        imagesUpdate
     ),
     parallel(wathes, browsersync)
 );
