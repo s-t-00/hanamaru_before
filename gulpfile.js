@@ -27,6 +27,10 @@ const path = {
     images: {
         src: './src/images/**/*.{jpg,jpeg,png,gif,svg}',
         dest: './dest/images/'
+    },
+    js: {
+        src: './src/js/**/*.js',
+        dest: './dest/js/'
     }
 };
 
@@ -65,22 +69,6 @@ function htmlCompile() {
             })
         )
         .pipe(dest(path.dest + "./"));
-}
-
-function jsComplile() {
-    return src(path.src + "js/*.js", { sourcemaps: true })
-        .pipe(plumber(notify.onError("Error: <%= error.message %>")))
-        .pipe(concat("common.js"))
-        .pipe(uglify())
-        .pipe(dest(path.dest + "./js/", { sourcemaps: "./sourcemaps" }));
-}
-
-function jsComplileVendor() {
-    return src(path.src + "js-vendor/*.js", { sourcemaps: true })
-        .pipe(plumber(notify.onError("Error: <%= error.message %>")))
-        .pipe(concat("vendor.js"))
-        .pipe(uglify())
-        .pipe(dest(path.dest + "./js/", { sourcemaps: "./sourcemaps" }));
 }
 
 function sassComplile() {
@@ -122,14 +110,21 @@ function cleanMapFiles() {
 
 function wathes(done) {
     watch([path.src + "html/**"], htmlCompile);
-    watch([path.src + "js/**"], jsComplile);
-    watch([path.src + "js-vendor/**"], jsComplileVendor);
     watch([path.src + "sass/**"], sassComplile);
     watch(
         [path.src + "html/_layouts/", path.dest + "*", path.dest + "**"],
         browsersyncReload
     );
     done();
+}
+
+function jsUpdate() {
+    let out = path.js.dest;
+    return gulp.src(path.js.src)
+        .pipe(plumber(notify.onError("Error: <%= error.message %>")))
+        .pipe( newer(out) )
+        .pipe( uglify() )
+        .pipe( gulp.dest(out) );
 }
 
 function imagesUpdate() {
@@ -148,9 +143,8 @@ exports.default = series(
     cleanMapFiles,
     parallel(
         htmlCompile,
-        jsComplile,
-        jsComplileVendor,
         sassComplile,
+        jsUpdate,
         imagesUpdate
     ),
     parallel(wathes, browsersync)
