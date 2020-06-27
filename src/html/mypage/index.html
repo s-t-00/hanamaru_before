@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% set page = {
+    "css": [],
+    "title": ""
+} %}
+{% set lists = [
+  ["/mypage/troubles", "重要度チェック"],
+  ["/mypage/trouble-detail", "問題点詳細"],
+  ["/mypage/trouble-check", "お悩みチェック"],
+  ["/mypage/status-modal", "ステータス確認モーダル"],
+  ["/mypage/status", "ステータス確認"],
+  ["/mypage/notifications", "お知らせ"],
+  ["/mypage/legacyinfo", "相続予定財産情報"],
+  ["/mypage/diagnosis", "マイページ診断"]
+] %}
+{% block content %}
+
+<section class="box-wrapper">
+  <div class="box-inner">
+    <ul>
+      {% for url, title in lists %}
+      <li style="display:block;margin:10px 0;"><a href="{{url}}.html">{{title}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}
