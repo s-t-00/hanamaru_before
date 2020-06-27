@@ -13,13 +13,39 @@
     "text": "お悩みチェック"
   }
 ] %}
+{% set check_items = [
+  "生前贈与したいが 子どもや孫の無駄使いや金銭感覚の麻痺が心配だ",
+  "生命保険金の非課税枠を活用したいが、持病があったり、過去に大きな病気をしているため加入できない",
+  "遺産を残したくない身内がいる",
+  "孫に財産を残したいが、わざわざ遺言を書くのも面倒だ",
+  "遺産はなるべく公平に子供たちに残したいが、不動産や自社株など分割しにくいものが大半である。",
+  "遺産を上回る負債があり相続放棄しないと負債を負わせることになるが、少しでも財産を残したい",
+  "相続税の節税をしたい",
+  "葬儀費用等を生命保険で準備したいが、どのような保険に入ればいいかわからない。"
+] %}
 
 {% block content %}
 
 <section class="box-wrapper my-tc-section01">
   <div class="box-inner">
   {% include '_breadcrumb.html' %}
-  
+
+  <p>終活に関してのお悩みをチェックしてください。</p>
+  <form action="#" method="POST" id="trouble-check">
+    {% for text in check_items %}
+    <div class="form-field form-field-single">
+      <div class="form-control form-control-checkbox">
+        <label><input type="checkbox" name="check{{loop.index}}">{{text}}</label>
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="form-field-footer">
+      <div class="form-control form-control-button">
+        <button class="button">送信する</button>
+      </div>
+    </div>
+  </form>
   </div>
 </section>
 

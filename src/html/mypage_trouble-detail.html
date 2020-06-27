@@ -9,6 +9,9 @@
     "url": "/",
     "text": "ホーム"
   }, {
+    "url": "/mypage/",
+    "text": "マイページ"
+  }, {
     "url": "",
     "text": "問題点詳細"
   }
@@ -18,7 +21,34 @@
 <section class="box-wrapper my-td-section01">
   <div class="box-inner">
   {% include '_breadcrumb.html' %}
-  
+
+    <div class="mypage-status">
+       <ul>
+         <li class="current">重要度チェック</li>
+         <li>お知らせ</li>
+         <li>ステータス確認</li>
+         <li>相続予定財産情報</li>
+       </ul>
+    </div>
+
+    <div class="my-td-trouble">
+      <p class="my-td-trouble-title">あなたが選んだ問題点</p>
+      <p>生命保険金の非課税枠を活用したいが、持病があったり、過去に大きな病気をしているため加入できない</p>
+    </div>
+    <p class="my-td-solution-arrow">こんな解決方法があります</p>
+    <div class="my-td-solution">
+      <p class="my-td-solution-title">無診査の生命保険がある</p>
+      <p>主に一時払の商品で健康状態に関わらず誰でも加入できる生命保険があります。何歳まで申し込めるかは保険会社によって異なります。</p>
+    </div>
+
+    <div class="form-field form-field-single">
+      <div class="form-control form-control-button">
+        <button class="button" onclick="javascript:;">この相談について<br>無料オンライン相談の予約を入れる</button>
+      </div>
+      <div class="form-control form-control-button">
+        <button class="button button-type2" onclick="javascript:;">相談せずに問題を解決済みにする</button>
+      </div>
+    </div>
   </div>
 </section>
 

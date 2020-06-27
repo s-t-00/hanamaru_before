@@ -2,23 +2,78 @@
 {% set page = {
     "cssname": "mypage",
     "css": "true",
-    "title": "問題点一覧 | "
+    "title": "マイページ 重要度チェック | "
 } %}
 {% set breadcrumb_list = [
   {
     "url": "/",
     "text": "ホーム"
   }, {
-    "url": "",
-    "text": "問題点一覧"
+    "url": "/mypage/",
+    "text": "マイページ"
+  }, {
+    "url": "", 
+    "text": "重要度チェック"
   }
 ] %}
+{% set legacy_lists = [
+  ["high", "生命保険を活用した生前贈与プランがある"],
+  ["high", "無診査の生命保険がある"],
+  ["mid", "生命保険に加入してみなし相続財産を作る"],
+  ["mid", "孫を受取人とする生命保険に加入する"],
+  ["low", "生命保険に加入して代償分割の資金にする"],
+  ["low", "生命保険に加入する"]
+] %}
+{% set others_lists = [
+  ["high", "●○を●○●○する"],
+  ["high", "●○を●○●○する"],
+  ["mid", "●○を●○●○する"],
+  ["mid", "●○を●○●○する"],
+  ["low", "●○を●○●○する"],
+  ["low", "●○を●○●○する"]
+] %}
+
 {% block content %}
 
 <section class="box-wrapper my-tl-section01">
   <div class="box-inner">
-  {% include '_breadcrumb.html' %}
-  
+    {% include '_breadcrumb.html' %}
+
+    <div class="form-field form-field-single">
+      <div class="form-control form-control-button">
+        <button class="button" onclick="javascript:;">マイページ診断はこちら</button>
+      </div>
+    </div>
+
+    <div class="mypage-status">
+       <ul>
+         <li class="current">重要度チェック</li>
+         <li>お知らせ</li>
+         <li>ステータス確認</li>
+         <li>相続予定財産情報</li>
+       </ul>
+    </div>
+
+    <p>あなたに起こりうる問題点です。それぞれの解決方法をご確認ください。</p>
+
+    <div class="my-tl-box">
+      <h3>相続に関すること</h3>
+      <ul>
+        {% for level, text in legacy_lists %}
+          <li><span class="label-{{level}}"><span></span></span>{{text}}</li>
+        {% endfor %}
+      </ul>
+
+    </div>
+    <div class="my-tl-box">
+      <h3>相続以外のこと</h3>
+      <ul>
+        {% for level, text in others_lists %}
+          <li><span class="label-{{level}}"><span></span></span>{{text}}</li>
+        {% endfor %}
+      </ul>
+
+    </div>
   </div>
 </section>
 

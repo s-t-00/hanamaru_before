@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% set page = {
-    "cssname": "mypage",
+    "cssname": "index",
     "css": "true",
     "title": "マイページ診断 | "
 } %}
@@ -9,15 +9,101 @@
     "url": "/",
     "text": "ホーム"
   }, {
+    "url": "/mypage/",
+    "text": "マイページ"
+  }, {
     "url": "",
     "text": "マイページ診断"
   }
 ] %}
 {% block content %}
 
-<section class="box-wrapper my-diag-section01">
+<section class="box-wrapper top-section01 my-diag-section01">
   <div class="box-inner">
   {% include '_breadcrumb.html' %}
+
+    <div class="top-sec01-title">
+      <h2>
+        <img src="/images/top/sec01-title01.png" alt="終活に必要な資金簡単クイック診断" class="sp-none">
+        <img src="/images/top/sec01-title01-sp.png" alt="終活に必要な資金簡単クイック診断" class="pc-none">
+      </h2>
+      <p>【STEP1】～【STEP2】を<br>入力すれば、相続税簡易試算できます。</p>
+    </div>
+    <div class="top-sec01-form">
+      <form action="#" method="POST" id="diagnosis">
+        <div class="form-field-wrapper">
+          <p class="top-sec01-form-title"><img src="/images/top/sec01-title02-01.png" alt="Step.1 法定相続人の設定"></p>
+          <div class="form-field">
+            <div class="form-field-label">配偶者</div>
+            <div class="form-field-content">
+              <div class="form-control form-control-radio">
+                <label><input type="radio" name="spouse"><span></span>あり</label>
+              </div>
+              <div class="form-control form-control-radio">
+                <label><input type="radio" name="spouse"><span></span>なし</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-field">
+            <div class="form-field-label">子供<span>（5名まで）</span></div>
+            <div class="form-field-content">
+              <div class="form-control form-control-radio">
+              <label><input type="radio" name="children" id="children-yes"><span></span>あり<input type="number" name="children-num" id="children-num" min="1" max="5" class="js-clickable" disabled=""><span class="form-control-unit">人</span>
+</label>
+              </div>
+              <div class="form-control form-control-radio">
+                <label>
+                  <input type="radio" name="children" id="children-none"><span></span>なし
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-field">
+            <div class="form-field-label">父母<span>（2名まで）</span>
+            </div>
+            <div class="form-field-content">
+              <div class="form-control form-control-radio">
+                <label><input type="radio" name="parents" id="parents-yes"><span></span>あり<input type="number" name="parents-num" id="parents-num" min="1" max="2" class="js-clickable"><span class="form-control-unit">人</span></label>
+              </div>
+              <div class="form-control form-control-radio">
+                <label>
+                  <input type="radio" name="parents" id="parents-none"><span></span>なし
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-field">
+            <div class="form-field-label">兄弟姉妹<span>（5名まで）</span></div>
+            <div class="form-field-content">
+              <div class="form-control form-control-radio">
+                <label><input type="radio" name="brother" id="brother-yes"><span></span>あり<input type="number" name="brother-num" id="brother-num" min="1" max="5" class="js-clickable"><span class="form-control-unit">人</span></label>
+              </div>
+              <div class="form-control form-control-radio">
+                <label>
+                  <input type="radio" name="brother" id="brother-none"><span></span>なし
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-field-wrapper">
+          <p class="top-sec01-form-title"><img src="/images/top/sec01-title02-03.png" alt="Step.2 配偶者の財産取得割合の設定"></p>
+          <div class="form-field form-field-single">
+            <div class="form-control form-control-text">
+              <input type="number" min="0" max="100"><span class="form-control-unit">%</span>
+            </div>
+            <p class="form-control-help">配偶者「無」の場合には、「0」を選択してください</p>
+          </div>
+        </div>
+
+        <div class="form-field-footer">
+          <div class="form-control form-control-button">
+            <button class="button">診断結果を見る</button>
+          </div>
+        </div>
+      </form>
+    </div>
   
   </div>
 </section>

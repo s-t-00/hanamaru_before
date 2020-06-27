@@ -142,8 +142,8 @@ function imagesUpdate() {
 
 /* setting exports
 --------------------------------------------------------*/
-exports.compile = sassComplile;
-exports.img = imagesUpdate;
+exports.css = sassComplile;
+exports.html = htmlCompile;
 exports.default = series(
     cleanMapFiles,
     parallel(

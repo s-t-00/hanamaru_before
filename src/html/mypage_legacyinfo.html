@@ -18,7 +18,72 @@
 <section class="box-wrapper my-leg-section01">
   <div class="box-inner">
   {% include '_breadcrumb.html' %}
-  
+
+    <div class="mypage-status">
+       <ul>
+         <li>重要度チェック</li>
+         <li>お知らせ</　li>
+         <li>ステータス確認</li>
+         <li class="current">相続予定財産情報</li>
+       </ul>
+    </div>
+
+    <h3><span class="color-pink">■</span>相続財産予定一覧</h3>
+    <dl class="my-leg-lists">
+      <dt>土地の想定価格</dt>
+      <dd><span class="js-numberformat">5000</span><span class="price-unit">万円</span></dd>
+
+      <dt>建物の想定価格</dt>
+      <dd><span class="js-numberformat">1000</span><span class="price-unit">万円</span></dd>
+
+      <dt>預金・金融資産合計</dt>
+      <dd><span class="js-numberformat">5000</span><span class="price-unit">万円</span></dd>
+
+      <dt>債務・葬式予定金額</dt>
+      <dd><span class="js-numberformat">5000</span><span class="price-unit">万円</span></dd>
+
+      <dt>(A)相続財産の予定合計金額</dt>
+      <dd class="color-pink"><span class="js-numberformat">5000</span><span class="price-unit">万円</span></dd>
+
+      <dt>(B)基礎控除額</dt>
+      <dd class="color-pink"><span class="js-numberformat">100</span><span class="price-unit">万円</span></dd>
+
+      <dt>(A)(B)課税標準額</dt>
+      <dd class="color-pink"><span class="js-numberformat">100</span><span class="price-unit">万円</span></dd>
+
+      <dt>納税額</dt>
+      <dd class="color-pink"><span class="js-numberformat">100</span><span class="price-unit">万円</span>
+        <div class="my-leg-detail">&lt;内訳&dt;<br>
+         <table>
+           <tr><th>妻</th><td><span class="js-numberformat">400</span><span class="price-unit">万円</span></td></tr>
+           <tr><th>子1</th><td><span class="js-numberformat">100</span><span class="price-unit">万円</span></td></tr>
+           <tr><th>子2</th><td><span class="js-numberformat">100</span><span class="price-unit">万円</span></td></tr>
+         </table>
+        </div>
+      </dd>
+    </dl>
+
+    <div class="my-leg-detail">
+      <div class="my-leg-detail-left">
+        <p class="my-leg-detail-title">法定相続人のケース</p>
+        <ul>
+          <li><img src="/images/mypage/icon-spouse.png/" alt="妻"></li>
+          <li><img src="/images/mypage/icon-child.png/" alt="子ども"></li>
+          <li><img src="/images/mypage/icon-child.png/" alt="子ども"></li>
+          <li><img src="/images/mypage/icon-child.png/" alt="子ども"></li>
+          <li><img src="/images/mypage/icon-child.png/" alt="子ども"></li>
+        </ul>
+        <p class="my-leg-detail-case">妻 + 子供<span>（配偶者がいない場合）</span></p>
+      </div>
+      <div class="my-leg-detail-right">
+        <p class="my-leg-detail-title">遺留分</p>
+        <canvas id="distributionChart"></canvas>
+        <table>
+          <tr><th>妻</th><td>1/4</td></tr>
+          <tr><th>子ども</th><td>1/4</td></tr>
+        </table>
+      </div>
+    </div>
   </div>
 </section>
 
