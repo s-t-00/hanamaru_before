@@ -5,6 +5,9 @@
 @import "_setting/_mixin";
 
 @include touch {
+  .main .box-inner {
+    padding: 0;
+  }
   .diagnosis-section01 {
     text-align: center;
     margin: 0 auto 76px;
@@ -130,6 +133,9 @@
 }
 
 @include desktop {
+  .main .box-inner {
+    padding: 0;
+  }
   .diagnosis-section01 {
     margin: 0 auto 152px;
     &::after{
