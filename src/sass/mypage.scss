@@ -359,6 +359,55 @@
       margin: 40px 0;
     }
   }
+
+  // マイページ診断
+  .my-diag-section01 {
+    .mypage-diagnosis-inner {
+      background-color: $color-cream;
+      padding: 20px 0;
+      margin: -40px auto 40px;
+    }
+    h2 img.pc-none {
+      width: 55%;
+      margin: 0 auto 1rem;
+    }
+    .diagnosis-top-title {
+      text-align: center; 
+    }
+    p.diagnosis-title {
+      margin: .75rem 0;
+      text-align: center;
+      img {
+        height: 36px;
+      }
+    }
+    .form-field {
+      .form-field-label {
+        text-align: left;
+        display: block;
+      }
+      .form-field-content {
+        display: block;
+      }
+    }
+    .form-control-text {
+      input {
+        width: 80%;
+      }
+      .form-control-unit {
+        width: 2em;
+        display: inline-block;
+        text-align: right;
+      }
+    }
+    .form-control-button {
+      button {
+        width: 90%;
+        box-shadow: 1px 2px 4px gray;
+        margin: 20px auto;
+      }
+    }
+  }
 }
 
 @include desktop {
@@ -496,6 +545,56 @@
       .form-control {
         width: 40%;
         margin: 0 auto;
+      }
+    }
+  }
+
+  // マイページ診断
+  .my-diag-section01 {
+    h2 img.sp-none {
+      height: 59px;
+      margin: 0 auto .5rem;
+    }
+    .diagnosis-form {
+      width: 84%;
+      margin:0 auto;
+    }
+    .form-field-wrapper {
+      width: 38%;
+      display: block;
+      float: left;
+      &:first-of-type {
+        width: 62%;
+      }
+      &::after {
+        @include clearfix;
+      }
+    }
+    .form-field {
+      margin: 5px 0;
+      .form-field-label {
+        width: 160px;
+        float: left;
+      }
+    }
+    .form-control-text {
+      text-align: center;
+      input {
+        width: 90px;
+      }
+      .form-control-unit {
+        display: inline;
+      }
+    }
+    .form-field-footer {
+      padding: 20px 0;
+      clear: both;
+      .form-control-button {
+        input[type=submit], button {
+          width: 360px;
+          padding: .5em 0;
+          margin: 0 auto;
+        }
       }
     }
   }

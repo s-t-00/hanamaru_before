@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% set page = {
-    "css": ["index"],
+    "css": ["mypage"],
     "title": "マイページ診断 | "
 } %}
 {% set breadcrumb_list = [
@@ -17,77 +17,58 @@
 ] %}
 {% block content %}
 
-<section class="box-wrapper top-section01 my-diag-section01">
+<section class="box-wrapper my-diag-section01">
   <div class="box-inner">
   {% include '_breadcrumb.html' %}
 
-    <div class="top-sec01-title">
+  </div>
+  <div class="box-inner mypage-diagnosis-inner">
+    <div class="diagnosis-top-title">
       <h2>
-        <img src="/images/top/sec01-title01.png" alt="終活に必要な資金簡単クイック診断" class="sp-none">
-        <img src="/images/top/sec01-title01-sp.png" alt="終活に必要な資金簡単クイック診断" class="pc-none">
+        <img src="/images/mypage/diagnosis-title00.png" alt="終活に必要な資金マイページ診断" class="sp-none">
+        <img src="/images/mypage/diagnosis-title00-sp.png" alt="終活に必要な資金マイページ診断" class="pc-none">
       </h2>
       <p>【STEP1】～【STEP2】を<br>入力すれば、相続税簡易試算できます。</p>
     </div>
-    <div class="top-sec01-form">
+    <div class="diagnosis-form">
       <form action="#" method="POST" id="diagnosis">
         <div class="form-field-wrapper">
-          <p class="top-sec01-form-title"><img src="/images/top/sec01-title02-01.png" alt="Step.1 法定相続人の設定"></p>
+          <p class="diagnosis-title"><img src="/images/mypage/diagnosis-title01.png" alt="Step.1 相続財産額の設定"></p>
           <div class="form-field">
-            <div class="form-field-label">配偶者</div>
-            <div class="form-field-content">
-              <div class="form-control form-control-radio">
-                <label><input type="radio" name="spouse"><span></span>あり</label>
-              </div>
-              <div class="form-control form-control-radio">
-                <label><input type="radio" name="spouse"><span></span>なし</label>
+            <div class="form-field-label">土地の想定価格</div>
+            <div class="form-field">
+              <div class="form-control form-control-text">
+                <input type="number" name="land_price" min="0" max="999999"><span class="form-control-unit">万円</span>
               </div>
             </div>
           </div>
           <div class="form-field">
-            <div class="form-field-label">子供<span>（5名まで）</span></div>
-            <div class="form-field-content">
-              <div class="form-control form-control-radio">
-              <label><input type="radio" name="children" id="children-yes"><span></span>あり<input type="number" name="children-num" id="children-num" min="1" max="5" class="js-clickable" disabled=""><span class="form-control-unit">人</span>
-</label>
-              </div>
-              <div class="form-control form-control-radio">
-                <label>
-                  <input type="radio" name="children" id="children-none"><span></span>なし
-                </label>
+            <div class="form-field-label">建物の想定価格</div>
+            <div class="form-field">
+              <div class="form-control form-control-text">
+                <input type="number" name="building_price" min="0" max="999999"><span class="form-control-unit">万円</span>
               </div>
             </div>
           </div>
           <div class="form-field">
-            <div class="form-field-label">父母<span>（2名まで）</span>
-            </div>
-            <div class="form-field-content">
-              <div class="form-control form-control-radio">
-                <label><input type="radio" name="parents" id="parents-yes"><span></span>あり<input type="number" name="parents-num" id="parents-num" min="1" max="2" class="js-clickable"><span class="form-control-unit">人</span></label>
-              </div>
-              <div class="form-control form-control-radio">
-                <label>
-                  <input type="radio" name="parents" id="parents-none"><span></span>なし
-                </label>
+            <div class="form-field-label">金融資産合計</div>
+            <div class="form-field">
+              <div class="form-control form-control-text">
+                <input type="number" name="financial_price" min="0" max="999999"><span class="form-control-unit">万円</span>
               </div>
             </div>
           </div>
           <div class="form-field">
-            <div class="form-field-label">兄弟姉妹<span>（5名まで）</span></div>
-            <div class="form-field-content">
-              <div class="form-control form-control-radio">
-                <label><input type="radio" name="brother" id="brother-yes"><span></span>あり<input type="number" name="brother-num" id="brother-num" min="1" max="5" class="js-clickable"><span class="form-control-unit">人</span></label>
-              </div>
-              <div class="form-control form-control-radio">
-                <label>
-                  <input type="radio" name="brother" id="brother-none"><span></span>なし
-                </label>
+            <div class="form-field-label">借り入れ金などの合計</div>
+            <div class="form-field">
+              <div class="form-control form-control-text">
+                <input type="number" name="loan_price" min="0" max="999999"><span class="form-control-unit">万円</span>
               </div>
             </div>
           </div>
         </div>
-
         <div class="form-field-wrapper">
-          <p class="top-sec01-form-title"><img src="/images/top/sec01-title02-03.png" alt="Step.2 配偶者の財産取得割合の設定"></p>
+          <p class="diagnosis-title"><img src="/images/mypage/diagnosis-title02.png" alt="Step.2 配偶者の財産取得割合の設定"></p>
           <div class="form-field form-field-single">
             <div class="form-control form-control-text">
               <input type="number" min="0" max="100"><span class="form-control-unit">%</span>
