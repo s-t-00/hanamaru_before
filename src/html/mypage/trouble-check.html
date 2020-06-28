@@ -27,24 +27,26 @@
 
 <section class="box-wrapper my-tc-section01">
   <div class="box-inner">
-  {% include '_breadcrumb.html' %}
+    {% include '_breadcrumb.html' %}
 
-  <p>終活に関してのお悩みをチェックしてください。</p>
-  <form action="#" method="POST" id="trouble-check">
-    {% for text in check_items %}
-    <div class="form-field form-field-single">
-      <div class="form-control form-control-checkbox">
-        <label><input type="checkbox" name="check{{loop.index}}">{{text}}</label>
+    <p>終活に関してのお悩みをチェックしてください。</p>
+  </div>
+  <div class="box-inner box-inner-no-padding">
+    <form action="#" method="POST" id="trouble-check">
+      {% for text in check_items %}
+      <div class="form-field">
+        <div class="form-control form-control-checkbox">
+          <label><input type="checkbox" name="check{{loop.index}}"><span></span>{{text}}</label>
+        </div>
       </div>
-    </div>
-    {% endfor %}
+      {% endfor %}
 
-    <div class="form-field-footer">
-      <div class="form-control form-control-button">
-        <button class="button">送信する</button>
+      <div class="form-field-footer">
+        <div class="form-control form-control-button">
+          <button class="button">送信する</button>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
   </div>
 </section>
 

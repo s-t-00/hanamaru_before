@@ -41,8 +41,8 @@
       }
     }
   }
-  /* ラジオボタン系インプット */
-  .form-control-radio {
+  /* ラジオボタン/チェックボックス系インプット */
+  .form-control-radio, .form-control-checkbox {
     width: 50%;
     label {
       width: 100%;
@@ -51,8 +51,10 @@
       padding-left: 2rem;
       box-sizing: border-box;
       cursor: pointer;
-    }    
-    input[type=radio], input[type=checkbox] {
+    }
+  }
+  .form-control-radio {
+    input[type=radio] {
       position: absolute;
       visibility: hidden;
       & + span {
@@ -81,9 +83,46 @@
       }
     }
   }
+  .form-control-checkbox {
+    input[type=checkbox] {
+      position: absolute;
+      visibility: hidden;
+      & + span {
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        height: 1.5rem;
+        width: 1.5rem;
+        background-color: $color-white;
+        border: 1px solid $color-dark-gray;
+        border-radius: 2px;
+        z-index: 5;
+        display: block;
+        position: absolute;
+      }
+      &:checked + span::after {
+        content: "";
+        left: -.5rem;
+        width: 2rem;
+        height: 2rem;
+        background-image: url(/images/common/form-check.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translate(-4px, -2px);
+        -webkit-transform: translate(-4px, -2px);
+        display: block;
+      }
+      &:disabled + span {
+        border: 1px solid $color-disabled;
+        background-color: $color-gray;
+      }
+    }
+  }
   /* ボタン系インプット */
   .form-control-button {
-    input[type=submit], button {
+    input[type=submit], button, .button {
       width: 100%;
       text-align: center;
       display: block;
@@ -100,13 +139,27 @@
         outline-color: $color-pink;
       }
       &::after {
-        content: "＞";
+        content: "\03e";
         right: 10px;
         top: 50%;
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
         font-size: .95rem;
         position: absolute;
+      }
+      &.button-type2 {
+        color: $color-green;
+        background-color: $color-gray;
+        outline-color: $color-gray;
+        .is_notTouchDevice &:hover, .is_notTouchDevice &:focus {
+          background-color: $color-cream;
+          outline-color: $color-cream;
+        }
+        &::after {
+          content: "\03c";
+          left: 10px;
+          right: inherit;
+        }
       }
     }
   }

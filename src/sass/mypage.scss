@@ -10,6 +10,19 @@
     &.box-inner-no-padding {
       padding: 0;
     }
+    + .box-inner-no-padding {
+      margin: -60px auto 60px;
+    }
+  }
+
+  .mypage-header-button {
+    .form-control {
+      width: 80%;
+      margin: 0 auto;
+      button, input[type=submit], .button {
+        padding: .5em 0;
+      }
+    }
   }
 
   .mypage-status {
@@ -37,11 +50,8 @@
     text-align: center;
     margin: 20px 0 0;
     .form-control-button {
-      display: inline-block;
       .button {
-        width: auto;
         @include font-size(14);
-        padding: 8px 50px 8px 30px;
         box-shadow: 0 1px 2px $color-dark-gray;
       }
     }
@@ -147,9 +157,96 @@
       }
     }
   }
+
+  // 問題点詳細
+  .my-td-section01 {
+    .my-td-trouble {
+      .my-td-trouble-title {
+        @include font-size(20);
+        text-align: center;
+        position: relative;
+        &::before {
+          content: "";
+          width: 1.5em;
+          height: 1.5em;
+          background-image: url(/images/mypage/trouble-detail-icon01.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: bottom;
+          margin-right: 5px;
+          display: inline-block;
+        }
+        + p {
+          margin: 20px 0;
+        }
+      }
+    }
+    .my-td-solution-arrow {
+      width: 100%;
+      @include font-size(26);
+      font-weight: 600;
+      color: $color-green;
+      text-align: center;
+      background-image: url(/images/mypage/trouble-detail-icon02.png);
+      background-repeat: no-repeat;
+      background-size: 80px 44px;
+      background-position: center bottom;
+      margin: 0 0 30px;
+      padding: 10px 0 55px;
+    }
+    .my-td-solution {
+      .my-td-solution-title {
+        @include font-size(20);
+        font-weight: 600;
+        color: $color-pink;
+        + p {
+          margin: 10px 0 20px;
+        }
+      }
+    }
+    .form-field-single {
+      display: block;
+    }
+  }
+
+  // お悩みチェック
+  .my-tc-section01 {
+    .breadcrumb + p {
+      margin: 20px 0;
+    }
+    .form-field:nth-child(even) {
+      background-color: $color-gray;
+    }
+    .form-control-checkbox {
+      width: 100%;
+      padding: 14px 20px;
+      label {
+        @include font-size(20);
+        padding-left: 2.5rem;
+      }
+      input[type=checkbox] + span {
+        top: 0;
+        left: 0;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+      }
+    }
+    .form-field-footer {
+      padding: 20px;
+    }
+  }
+
 }
 
 @include desktop {
+  .mypage-header-button {
+    .form-control {
+      width: 30%;
+      margin: 0;
+      float: right;
+    }
+  }
+
   .mypage-status {
     ul {
       flex-wrap: nowrap;
@@ -168,7 +265,6 @@
   // 重要度チェック
   .my-tl-section01 {
     .box-inner-no-padding {
-      margin: -40px auto 60px;
       display: flex;
       justify-content: space-between;
       .my-tl-box {
@@ -180,6 +276,30 @@
           }
         }
       }
+    }
+  }
+
+  // 問題点詳細
+  .my-td-section01 {
+    .my-td-trouble .my-td-trouble-title {
+      text-align: left;
+      + p {
+        margin: 10px 0 20px;
+      }
+    }
+    .form-control {
+      width: 60%;
+      display: block;
+      margin: 0 auto 20px;
+    }
+  }
+
+  // お悩みチェック
+  .my-tc-section01 {
+    .form-field-footer {
+      width: 400px;
+      padding: 60px 0 40px;
+      margin: 0 auto;
     }
   }
 }
