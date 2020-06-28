@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 {% set page = {
-    "css": ["mypage"],
+    "css": ["mypage", "vender/Chart.min"],
+    "js": ["vender/Chart.min", "mypage/legacyinfo"],
     "title": "相続予定財産情報 | "
 } %}
 {% set breadcrumb_list = [
@@ -55,7 +56,7 @@
 
       <dt>納税額</dt>
       <dd class="color-pink"><span class="js-numberformat">100</span><span class="price-unit">万円</span>
-        <div class="my-leg-detail">&lt;内訳&gt;<br>
+        <div class="my-leg-detail-prices">&lt;内訳&gt;<br>
          <table>
            <tr><th>妻</th><td><span class="js-numberformat">400</span><span class="price-unit">万円</span></td></tr>
            <tr><th>子1</th><td><span class="js-numberformat">100</span><span class="price-unit">万円</span></td></tr>
@@ -68,23 +69,37 @@
     <div class="my-leg-detail">
       <div class="my-leg-detail-left">
         <p class="my-leg-detail-title">法定相続人のケース</p>
-        <ul>
-          <li><img src="/images/mypage/icon-spouse.png/" alt="妻"></li>
-          <li><img src="/images/mypage/icon-child.png/" alt="子ども"></li>
-          <li><img src="/images/mypage/icon-child.png/" alt="子ども"></li>
-          <li><img src="/images/mypage/icon-child.png/" alt="子ども"></li>
-          <li><img src="/images/mypage/icon-child.png/" alt="子ども"></li>
-        </ul>
-        <p class="my-leg-detail-case">妻 + 子供<span>（配偶者がいない場合）</span></p>
+        <div class="my-leg-detail-inner">
+          <ul>
+            <li><img src="/images/mypage/legacy-icon01.png" alt="妻"></li>
+            <li><img src="/images/mypage/legacy-icon02.png" alt="子ども"></li>
+            <li><img src="/images/mypage/legacy-icon02.png" alt="子ども"></li>
+            <li><img src="/images/mypage/legacy-icon02.png" alt="子ども"></li>
+            <li><img src="/images/mypage/legacy-icon02.png" alt="子ども"></li>
+          </ul>
+          <p class="my-leg-detail-case">妻 + 子供<span>（配偶者がいない場合）</span></p>
+        </div>
       </div>
       <div class="my-leg-detail-right">
         <p class="my-leg-detail-title">遺留分</p>
-        <canvas id="distributionChart"></canvas>
-        <table>
-          <tr><th>妻</th><td>1/4</td></tr>
-          <tr><th>子ども</th><td>1/4</td></tr>
-        </table>
+        <div class="my-leg-detail-inner">
+          <div class="my-leg-detail-inner-canvas">
+            <canvas id="distributionChart"></canvas>
+          </div>
+          <div class="my-leg-detail-inner-table">
+            <table>
+              <tr><th>妻</th><td>1/4</td></tr>
+              <tr><th>子ども</th><td>1/4</td></tr>
+            </table>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="form-field-footer">
+        <div class="form-control form-control-button">
+          <button class="button button-type2">戻る</button>
+        </div>
     </div>
   </div>
 </section>

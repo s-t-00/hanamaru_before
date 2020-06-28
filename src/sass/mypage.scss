@@ -273,6 +273,92 @@
       }
     }
   }
+
+  // 相続財産予定一覧
+  .my-leg-section01 {
+    h3 {
+      @include font-size(24);
+    }
+    dl {
+      @include font-size(18);
+      dt {
+        text-indent: 20px;
+        margin: 20px 0 0;
+      }
+      dd {
+        border-bottom: 1px solid $color-pink;
+        padding: 4px 20px 8px;
+        display: block;
+        .my-leg-detail-prices {
+          color: $font-color;
+          @include font-line-height(18, 36);
+          table {
+            width: calc( 100% - 40px );
+            padding: 0 20px;
+          }
+          th, td {
+            width: 50%;
+            font-weight: normal;
+          }
+          td {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .my-leg-detail {
+      margin-top: 30px;
+      border-collapse: collapse;
+      .my-leg-detail-left, .my-leg-detail-right {
+        border:1px solid $color-dark-gray;
+      }
+      .my-leg-detail-title {
+        width: 100%;
+        color: $color-white;
+        @include font-size(18);
+        background-color: $font-color;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .my-leg-detail-inner {
+        padding: 40px 20px;
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          li {
+            flex-basis: 18%;
+            max-width: 80px;
+            margin: 0 .5%;
+            text-align: center;
+          }
+        }
+        .my-leg-detail-case, table {
+          @include font-size(24);
+          text-align: center;
+          margin: 20px 0 0;
+          span {
+            @include font-size(16);
+            display: block;
+          }
+        }
+      }
+      .my-leg-detail-right {
+        canvas, table {
+          margin: 0 auto;
+        }
+        table {
+          margin-top: 30px;
+          td {
+            padding: 0 0 0 20px;
+          }
+        }
+      }
+    }
+    .form-field-footer {
+      margin: 40px 0;
+    }
+  }
 }
 
 @include desktop {
@@ -337,6 +423,80 @@
       width: 400px;
       padding: 60px 0 40px;
       margin: 0 auto;
+    }
+  }
+
+  // 相続財産予定一覧
+  .my-leg-section01 {
+    h3 {
+      @include font-size(34);
+    }
+    dl {
+      @include font-size(30);
+      display: flex;
+      flex-wrap: wrap;
+      dt {
+        flex-basis: 40%;
+        text-indent: .5em;
+        border-right: 1px solid $color-pink;
+        border-bottom: 1px solid $color-pink;
+        margin: 0;
+        padding: 14px 0 4px;
+      }
+      dd {
+        flex-basis: 60%;
+        padding: 14px .5em 4px;
+        text-align: right;
+        .my-leg-detail-prices {
+          width: 100%;
+          @include font-line-height(30, 60);
+          text-align: left;
+          margin: 0;
+          table {
+            width: 100%;
+            padding: 0;
+            th {
+              text-indent: .5em;
+            }
+          }
+        }
+      }
+    }
+    .my-leg-detail {
+      width: 80%;
+      display: table;
+      margin: 30px auto 0;
+      .my-leg-detail-left, .my-leg-detail-right {
+        display: table-cell;
+        vertical-align: top;
+      }
+      .my-leg-detail-left {
+        width: 40%;
+        .my-leg-detail-inner {
+          padding: 80px 20px 40px;
+        }
+      }
+      .my-leg-detail-right {
+        width: 60%;
+        .my-leg-detail-inner {
+          display: table;
+          div {
+            width: 50%;
+            display: table-cell;
+            padding: 40px 0 20px;
+            vertical-align: middle;
+            table {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    .form-field-footer {
+      .form-control {
+        width: 40%;
+        margin: 0 auto;
+      }
     }
   }
 }
