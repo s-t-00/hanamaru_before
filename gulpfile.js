@@ -139,6 +139,7 @@ function imagesUpdate() {
 --------------------------------------------------------*/
 exports.css = sassComplile;
 exports.html = htmlCompile;
+exports.js = jsUpdate;
 exports.default = series(
     cleanMapFiles,
     parallel(

@@ -236,6 +236,43 @@
     }
   }
 
+  // お知らせ
+  .is_notTouchDevice .my-not-section01 .my-notifications li .my-not-title:hover {
+    color: $color-pink;
+  }
+  .my-not-section01 {
+    .my-notifications {
+      li {
+        padding: 20px 0;
+        border-bottom: 1px dashed $color-dark-gray;
+        display: block;
+        word-break: break-word;
+        .my-not-title {
+          color: $color-green;
+          @include font-size(18);
+          cursor: pointer;
+        }
+        .my-not-update {
+          @include font-size(14);
+          padding: 10px 0 0;
+          span {
+            content: "";
+            width: 1em;
+            height: 1em;
+            background-image: url(/images/mypage/notifications-icon01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-y: bottom;
+            margin-right: 4px;
+            display: inline-block;
+          }
+        }
+        .my-not-detail {
+          padding: 20px 0 0;
+        }
+      }
+    }
+  }
 }
 
 @include desktop {

@@ -56,12 +56,12 @@
        </ul>
     </div>
 
-  <ul>
+  <ul class="my-notifications">
     {% for time, title, detail in lists %}
       <li>
-        <p class="my-not-title js_accordion">{{title}}</p>
-        <span class="my-not-update">{{time}}</span>
-        <p class="my-not-detail">{{detail}}</p>
+        <p class="my-not-title js-accordion">{{title}}</p>
+        <p class="my-not-update"><span></span>{{time}}</p>
+        <p class="my-not-detail" data-rel="js-accordion"{% if loop.first %} data-show="1"{% endif %}>{{detail}}</p>
       </li>
     {% endfor %}
   </ul>

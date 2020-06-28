@@ -38,5 +38,16 @@ $(function() {
     var num = $(this).text();
     $(this).text(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(num));
   });
+
+  var $accordion = $(".js-accordion");
+  $accordion.each(function(){
+    $target = $(this).siblings("[data-rel='js-accordion']");
+    if($target.attr('data-show') != true) {
+      $target.slideUp(0);
+    }
+  }).bind("click", function(){
+    $target = $(this).siblings("[data-rel='js-accordion']");
+    $target.slideToggle(200);
+  });
 });
 
