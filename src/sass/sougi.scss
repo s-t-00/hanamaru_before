@@ -60,6 +60,8 @@ main {
     margin-left: 5%;
     margin-right: 8%;
     // float: right;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -551,12 +553,16 @@ main {
         margin: 0;
     }
 
+    .content {
+        clear: both;
+    }
+
 
     .breadcrumbs {
         display: none;
     }
 
-    .top-image-and-local-nav {
+    section {
         display: flex;
         /* Flexコンテナ―に設定 */
         flex-direction: column;
@@ -583,11 +589,29 @@ main {
         margin: 0;
     }
 
+    .content01-title {
+        order: 4;
+
+    }
+
     .local-nav-content {
         margin: 0;
     }
 
     .local-nav {
         margin: 0;
+        width: 100vw;
+    }
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+    /* pc対応 */
+
+
+    .content-title-box {
+        width: 50vw;
     }
 }
