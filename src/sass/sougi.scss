@@ -1,0 +1,593 @@
+.breadcrumbs {
+    width: 980px;
+    margin: 10px auto 0;
+}
+
+.breadcrumbs ul {
+    display: table;
+    font-size: 13px;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+.breadcrumbs ul li {
+    margin: 0 10px 0 0;
+    font-size: 13px;
+    float: left;
+    font-size: 17px;
+}
+
+.breadcrumbs ul li:first-child::before {
+    display: none;
+    //     padding: 0 3px 0 0;
+    // content: ">";
+    // font-family: FontAwesome;
+    // font-size: 14px;
+}
+
+.breadcrumbs ul li::before {
+    padding: 0 10px 0 0;
+    content: ">";
+    font-family: FontAwesome;
+    // font-size: 14px;
+}
+
+
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+// .groval-nav {
+//     height: 70px;
+//     text-align: center;
+//     background-color: #888;
+//     color: #fff;
+// }
+
+main {
+    min-height: 100vh;
+    display: flex;
+    margin-top: 10px;
+}
+
+.content {
+    flex: 1;
+    // background-color: #eee;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 8%;
+    // float: right;
+}
+
+
+.local-nav {
+    width: 200px;
+    text-align: center;
+    // background-color: #888;
+    // color: #fff;
+    margin-left: 8%;
+    margin-top: 15px;
+    float: left;
+}
+
+.local-nav-content01 {
+    margin-bottom: 80px;
+}
+
+.local-nav-content02 {
+    margin-bottom: 80px;
+}
+
+
+.local-nav-content01-title {
+    background-color: skyblue;
+    color: #fff;
+}
+
+.local-nav-content01-title p {
+    width: 100px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-01 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-02 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-03 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+
+    font-size: 21px;
+}
+
+.local-nav-content01-04 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-05 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-06 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-07 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-08 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-09 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-10 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-11 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content01-12 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: skyblue;
+    border-width: thin;
+    font-size: 21px;
+}
+
+
+.local-nav-content01-01 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-02 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-03 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-04 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-05 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-06 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-07 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-08 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-09 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-10 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-11 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content01-12 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+.local-nav-content02-title {
+    background-color: orange;
+    color: #fff;
+}
+
+.local-nav-content02-title p {
+    width: 100px;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content02-01 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: orange;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content02-02 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: orange;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content02-03 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: orange;
+    border-width: thin;
+
+    font-size: 21px;
+}
+
+.local-nav-content02-04 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: orange;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content02-05 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: orange;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content02-06 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: orange;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content02-07 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: orange;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content02-08 {
+    border: solid;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    /* 上辺・左辺・右辺が透明になる */
+    border-color: orange;
+    border-width: thin;
+    font-size: 21px;
+}
+
+.local-nav-content02-01 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content02-02 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content02-03 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content02-04 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content02-05 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content02-06 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content02-07 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.local-nav-content02-08 p {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+.top-image {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 85vw;
+}
+
+
+.content-title-box {
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+}
+
+.content01-little-box {
+    background-color: orange;
+    width: 20px;
+    height: 20px;
+    // display: inline-block;
+    /* 文字の長さにwidthを合わせる */
+    float: left;
+    margin-top: 8px;
+
+}
+
+.content01-title {
+    margin-left: 10px;
+    font-size: 25px;
+    float: left;
+
+}
+
+.content01-text01 {
+    margin-bottom: 20px;
+}
+
+.content01-circle {
+    margin-bottom: 20px;
+}
+
+.content01-image {
+    margin-bottom: 80px;
+}
+
+
+.content02-little-box {
+    background-color: skyblue;
+    width: 20px;
+    height: 20px;
+    // display: inline-block;
+    /* 文字の長さにwidthを合わせる */
+    float: left;
+    margin-top: 8px;
+
+}
+
+.content02-title {
+    margin-left: 10px;
+    font-size: 25px;
+    float: left;
+
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    /* スマホ対応 */
+
+    main {
+        margin: 0;
+    }
+
+
+    .breadcrumbs {
+        display: none;
+    }
+
+    .top-image-and-local-nav {
+        display: flex;
+        /* Flexコンテナ―に設定 */
+        flex-direction: column;
+        /* コンテンツの配置を「上→下」に設定 */
+    }
+
+    .local-nav-content01 {
+        order: 1;
+        width: 100vw;
+        float: none;
+        margin: 0;
+    }
+
+    .local-nav-content02 {
+        order: 2;
+        width: 100vw;
+        float: none;
+        margin: 0;
+    }
+
+    .top-image {
+        order: 3;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .local-nav-content {
+        margin: 0;
+    }
+
+    .local-nav {
+        margin: 0;
+    }
+}
