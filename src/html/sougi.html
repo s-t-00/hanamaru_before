@@ -1,4 +1,18 @@
-{% extends 'layout.html' %} {% set page = { "css": ["sougi"], "js": ["sougi"], "title": "", "top": "true" } %}
+{% extends 'layout.html' %}
+{% set page = {
+    "css": ["sougi"],
+    "js": ["sougi"],
+    "title": "葬儀について | "
+} %}
+{% set breadcrumb_list = [
+  {
+    "url": "/",
+    "text": "ホーム"
+  }, {
+    "url": "",
+    "text": "葬儀について"
+  }
+] %}
 {% block content %}
 
 
@@ -47,15 +61,11 @@
 
 
 
-<section class="" role="" area-label="">
+<section class="box-wrapper">
 
-    <!-- <header class="groval-nav"> -->
-    <div class="breadcrumbs">
-        <ul>
-            <li><a href="http://localhost:10100/">ホーム</li>
-            <li><a href="/seo/">葬儀について</li>
-        </ul>
-    </div>
+    <div class="box-inner">
+        {% include '_breadcrumb.html' %}
+      </div>
 
     <!-- <div class="top-image-and-local-nav"> -->
     <div class="top-image">
