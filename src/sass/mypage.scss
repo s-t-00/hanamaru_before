@@ -236,6 +236,167 @@
     }
   }
 
+  // ステータス確認
+  .my-st-section01 {
+    .my-st-member {
+      background-color: $color-gray;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px 10px;
+      margin: 20px 0;
+      .my-st-member-image {
+        width: 64px;
+        align-self: center;
+      }
+      .my-st-member-info {
+        width: calc( 100% - 74px );
+        margin-left: 10px;
+        p {
+          span {
+            display: block;
+          }
+        }
+      }
+      .my-st-member-button {
+        width: 100%;
+        padding: 10px 0;
+        display: table;
+        .form-control {
+          width: 48%;
+          display: table-cell;
+          &:first-child {
+            padding-right: 4%;
+          }
+          .button {
+            @include font-size(14);
+          }
+        }
+      }
+    }
+    .box-inner-no-padding {
+      h3 {
+        color: $color-white;
+        @include font-size(24);
+        text-align: center;
+        background-color: $color-green;
+      }
+      .my-st-family-tree {
+        background-color: $color-gray;
+        padding: 20px 0;
+        .my-st-family-group {
+          width: 100%;
+          max-width: 390px;
+          color: $color-dark-gray;
+          padding: 0 20px;
+          display: flex;
+          justify-content: space-between;
+          margin: 0 auto;
+          // 126px*158px（5文字*5列)
+          div {
+            ul {
+              width: 104px;
+//              min-height: calc( 154px / 5 * 3 );
+              min-height: 154px;
+              background-color: $color-white;
+              border: 2px solid $color-green;
+              display: inline-flex;
+              align-items: center;
+              flex-wrap: wrap;
+              padding: 10px;
+              li {
+                width: 100%;
+                display: block;
+              }
+            }
+            &.is_selected {
+              ul {
+                border-color: $color-pink;
+              }
+            }
+            .my-st-family-rel {
+              width: 104px;
+              height: 24px;
+              background-color: $color-gray;
+              text-align: center;
+            }
+          }
+          &.my-st-family-group1 {
+            div {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+          &.my-st-family-group2 {
+            .my-st-family-group2-space {
+              width: calc( 100% - 208px );
+              background-image: url(/images/mypage/status-border2.png);
+              background-repeat: no-repeat;
+              background-position: 50% 100%;
+              padding-bottom: 40px;
+              display: block;
+            }
+          }
+          &.my-st-family-group3 {
+            .my-st-family-group3-space1 {
+              width: calc( 100% - 228px );
+              background-image: url(/images/mypage/status-border3.png);
+              background-repeat: no-repeat;
+              background-position: 40px 107%;
+              padding-bottom: 40px;
+              display: block;
+            }
+            .my-st-family-group3-space2 {
+              width: 20px;
+              background-image: url(/images/mypage/status-border4.png);
+              background-repeat: repeat-x;
+              background-position: 0 35%;
+              display: block;
+            }
+            .my-st-family-group3-1 {
+              ul {
+                border-color: $color-dark-gray;
+              }
+            }
+            .my-st-family-group3-2 {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+          &.my-st-family-group4 {
+            .my-st-family-group4-1 {
+
+            }
+            .my-st-family-group4-2 {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+          &.my-st-family-group5 {
+            width: 100%;
+            .my-st-family-group5-1 {
+
+            }
+          }
+        }
+      }
+    }
+
+    .form-field-single {
+      width: calc( 100% - 40px );
+      display: block;
+      margin: 30px auto 0;
+    }
+  }
+
   // お知らせ
   .is_notTouchDevice .my-not-section01 .my-notifications li .my-not-title:hover {
     color: $color-pink;
@@ -472,6 +633,43 @@
       width: 400px;
       padding: 60px 0 40px;
       margin: 0 auto;
+    }
+  }
+
+  // ステータス確認
+  .my-st-section01 {
+    .my-st-member {
+      padding: 5px 5px 5px 20px;
+      margin: 20px 0;
+      .my-st-member-image {
+        width: 64px;
+      }
+      .my-st-member-info {
+        width: calc( 60% - 80px );
+        align-self: center;
+        margin-left: 16px;
+        p {
+          span {
+            display: inline-block;
+            margin-right: 2em;
+          }
+        }
+      }
+      .my-st-member-button {
+        width: 40%;
+        align-self: center;
+        padding: 0;
+        .form-control {
+          width: 49%;
+          &:first-child {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+    
+    .form-field-single {
+      width: 360px;
     }
   }
 

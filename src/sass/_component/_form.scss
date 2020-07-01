@@ -134,6 +134,7 @@
       position: relative;
       outline-color: $color-green;
       box-sizing: border-box;
+      box-shadow: 0 1px 2px $color-dark-gray;
       .is_notTouchDevice &:hover, .is_notTouchDevice &:focus {
         background-color: $color-pink;
         outline-color: $color-pink;
@@ -151,7 +152,6 @@
         color: $color-green;
         background-color: $color-gray;
         outline-color: $color-gray;
-        box-shadow: 0 1px 2px $color-dark-gray;
         .is_notTouchDevice &:hover, .is_notTouchDevice &:focus {
           background-color: $color-cream;
           outline-color: $color-cream;
@@ -160,6 +160,15 @@
           content: "\03c";
           left: 10px;
           right: inherit;
+        }
+      }
+      &.button-type3 {
+        background-color: $color-disabled;
+        outline-color: $color-disabled;
+        .is_notTouchDevice &:hover, .is_notTouchDevice &:focus {
+          color: $font-color;
+          background-color: $color-gray;
+          outline-color: $color-gray;
         }
       }
     }
