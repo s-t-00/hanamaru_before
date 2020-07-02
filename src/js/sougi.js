@@ -1,4 +1,5 @@
-< script >
+{
+  /* < script >
     $(function() {
         $(".menu-btn01").click(function() {
             $(".sp-menu01").slideToggle(200);
@@ -36,4 +37,5 @@ $(function() {
         }
     });
 }); <
-/script>
+/script> */
+}
