@@ -11,9 +11,7 @@
           {% for item in global.nav.header %}
           <li class="{{item. class}}">
             <a href="#">
-              <span>
-                {{item.label}}
-              </span>
+              <span></span><p>{{item.label | striptags(true) | escape | nl2br}}</p>
             </a>
           </li>
           {% endfor %}
