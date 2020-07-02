@@ -236,7 +236,9 @@
     }
   }
 
-  // ステータス確認
+  // ステータス確認（横5文字*縦5行）
+  $my-st-list-width: 104px;
+  $my-st-list-height: 154px;
   .my-st-section01 {
     .my-st-member {
       background-color: $color-gray;
@@ -282,21 +284,20 @@
       }
       .my-st-family-tree {
         background-color: $color-gray;
-        padding: 20px 0;
+        padding: 20px;
         .my-st-family-group {
           width: 100%;
           max-width: 390px;
           color: $color-dark-gray;
-          padding: 0 20px;
           display: flex;
           justify-content: space-between;
           margin: 0 auto;
-          // 126px*158px（5文字*5列)
+          // 104px*158px（5文字*5列)
           div {
             ul {
-              width: 104px;
-//              min-height: calc( 154px / 5 * 3 );
-              min-height: 154px;
+              width: $my-st-list-width;
+//            min-height: calc( #{$my-st-list-height} / 5 * 3 );
+              min-height: $my-st-list-height;
               background-color: $color-white;
               border: 2px solid $color-green;
               display: inline-flex;
@@ -314,7 +315,7 @@
               }
             }
             .my-st-family-rel {
-              width: 104px;
+              width: $my-st-list-width;
               height: 24px;
               background-color: $color-gray;
               text-align: center;
@@ -331,7 +332,7 @@
           }
           &.my-st-family-group2 {
             .my-st-family-group2-space {
-              width: calc( 100% - 208px );
+              width: calc( 100% -  #{$my-st-list-width} * 2 );
               background-image: url(/images/mypage/status-border2.png);
               background-repeat: no-repeat;
               background-position: 50% 100%;
@@ -341,7 +342,7 @@
           }
           &.my-st-family-group3 {
             .my-st-family-group3-space1 {
-              width: calc( 100% - 228px );
+              width: calc( 100% - (#{$my-st-list-width} * 2 + 20px) );
               background-image: url(/images/mypage/status-border3.png);
               background-repeat: no-repeat;
               background-position: 40px 107%;
@@ -369,21 +370,12 @@
             }
           }
           &.my-st-family-group4 {
-            .my-st-family-group4-1 {
-
-            }
             .my-st-family-group4-2 {
               background-image: url(/images/mypage/status-border1.png);
               background-repeat: repeat-y;
               background-size: contain;
               background-position: center;
               padding-bottom: 40px;
-            }
-          }
-          &.my-st-family-group5 {
-            width: 100%;
-            .my-st-family-group5-1 {
-
             }
           }
         }
@@ -637,6 +629,9 @@
   }
 
   // ステータス確認
+  $my-st-box-width: 570px;
+  $my-st-list-width: 104px;
+  $my-st-list-height: 154px;
   .my-st-section01 {
     .my-st-member {
       padding: 5px 5px 5px 20px;
@@ -667,7 +662,64 @@
         }
       }
     }
-    
+    .box-inner-no-padding {
+      h3 {
+        color: $color-white;
+        @include font-size(24);
+        text-align: center;
+        background-color: $color-green;
+      }
+      .my-st-family-tree {
+        .my-st-family-group {
+          max-width: $my-st-box-width;
+          &.my-st-family-group2 {
+            .my-st-family-group2-space {
+              background-image: url(/images/mypage/status-border5.png);
+              background-position: 50% 100%;
+              background-size: contain;
+            }
+          }
+          &.my-st-family-group3 {
+            .my-st-family-group3-space1 {
+              width: calc( #{$my-st-box-width} / 2 - #{$my-st-list-width} / 2 );
+              background-image: url(/images/mypage/status-border3.png);
+              background-repeat: no-repeat;
+              background-position: 40px 107%;
+              padding-bottom: 40px;
+              display: block;
+            }
+            .my-st-family-group3-space2 {
+              width: calc( #{$my-st-box-width} / 2 - #{$my-st-list-width} - #{$my-st-list-width} / 2 );
+              background-image: url(/images/mypage/status-border4.png);
+              background-repeat: repeat-x;
+              background-position: 0 35%;
+              display: block;
+            }
+            .my-st-family-group3-1 {
+              ul {
+                border-color: $color-dark-gray;
+              }
+            }
+            .my-st-family-group3-2 {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+          &.my-st-family-group4 {
+            .my-st-family-group4-2 {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+        }
+      }
+    }
     .form-field-single {
       width: 360px;
     }
