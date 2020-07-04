@@ -8,7 +8,12 @@
       </div>
       <div class="navbar-block">
         <ul class="navbar">
-          {% for item in global.nav.header %}
+          {% if page.css.length > 0 and page.css[0] == 'mypage' %}
+          {% set target = global.nav.mypage_header %}
+          {% else %}
+          {% set target = global.nav.header %}
+          {% endif %}
+          {% for item in target %}
           <li class="{{item.class}}">
             <a href="{{ item.url if item.url else '#' }}">
               <span></span><p>{{item.label | striptags(true) | escape | nl2br}}</p>
