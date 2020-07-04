@@ -9,8 +9,8 @@
       <div class="navbar-block">
         <ul class="navbar">
           {% for item in global.nav.header %}
-          <li class="{{item. class}}">
-            <a href="#">
+          <li class="{{item.class}}">
+            <a href="{{ item.url if item.url else '#' }}">
               <span></span><p>{{item.label | striptags(true) | escape | nl2br}}</p>
             </a>
           </li>
