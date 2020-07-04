@@ -238,7 +238,7 @@
 
   // ステータス確認（横5文字*縦5行）
   $my-st-list-width: 104px;
-  $my-st-list-height: 154px;
+  $my-st-list-height: 93px;
   .my-st-section01 {
     .my-st-member {
       background-color: $color-gray;
@@ -296,7 +296,6 @@
           div {
             ul {
               width: $my-st-list-width;
-//            min-height: calc( #{$my-st-list-height} / 5 * 3 );
               min-height: $my-st-list-height;
               background-color: $color-white;
               border: 2px solid $color-green;
@@ -335,7 +334,7 @@
               width: calc( 100% -  #{$my-st-list-width} * 2 );
               background-image: url(/images/mypage/status-border2.png);
               background-repeat: no-repeat;
-              background-position: 50% 100%;
+              background-position: 50% -80%;
               padding-bottom: 40px;
               display: block;
             }
@@ -345,7 +344,7 @@
               width: calc( 100% - (#{$my-st-list-width} * 2 + 20px) );
               background-image: url(/images/mypage/status-border3.png);
               background-repeat: no-repeat;
-              background-position: 40px 107%;
+              background-position: 40px 500%;
               padding-bottom: 40px;
               display: block;
             }
@@ -353,7 +352,7 @@
               width: 20px;
               background-image: url(/images/mypage/status-border4.png);
               background-repeat: repeat-x;
-              background-position: 0 35%;
+              background-position: 0 30%;
               display: block;
             }
             .my-st-family-group3-1 {
@@ -631,7 +630,7 @@
   // ステータス確認
   $my-st-box-width: 570px;
   $my-st-list-width: 104px;
-  $my-st-list-height: 154px;
+  $my-st-list-height: 9393px;
   .my-st-section01 {
     .my-st-member {
       padding: 5px 5px 5px 20px;
@@ -674,7 +673,6 @@
           max-width: $my-st-box-width;
           &.my-st-family-group2 {
             .my-st-family-group2-space {
-              background-image: url(/images/mypage/status-border5.png);
               background-position: 50% 100%;
               background-size: contain;
             }
@@ -684,7 +682,7 @@
               width: calc( #{$my-st-box-width} / 2 - #{$my-st-list-width} / 2 );
               background-image: url(/images/mypage/status-border3.png);
               background-repeat: no-repeat;
-              background-position: 40px 107%;
+              background-position: 40px 455%;
               padding-bottom: 40px;
               display: block;
             }
@@ -692,7 +690,7 @@
               width: calc( #{$my-st-box-width} / 2 - #{$my-st-list-width} - #{$my-st-list-width} / 2 );
               background-image: url(/images/mypage/status-border4.png);
               background-repeat: repeat-x;
-              background-position: 0 35%;
+              background-position: 0 26%;
               display: block;
             }
             .my-st-family-group3-1 {
