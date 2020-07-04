@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% set page = {
+    "css": ["mypage"],
+    "title": "無料オンライン相談予約 | "
+} %}
+{% set breadcrumb_list = [
+  {
+    "url": "/",
+    "text": "ホーム"
+  }, {
+    "url": "/mypage/",
+    "text": "マイページ"
+  }, {
+    "url": "",
+    "text": "無料オンライン相談予約"
+  }
+] %}
+{% block content %}
+
+<section class="box-wrapper my-resv-section01">
+  <div class="box-inner">
+  {% include '_breadcrumb.html' %}
+
+    <div class="mypage-status">
+       <ul>
+         <li class="current">重要度チェック</li>
+         <li>お知らせ</li>
+         <li>ステータス確認</li>
+         <li>相続予定財産情報</li>
+       </ul>
+    </div>
+
+    <div class="reservation-form-wrapper">
+      <h3><span class="color-pink">■</span>無料オンライン相談予約</h3>
+      <p class="color-pink"><span class="label-require">★</span>マークの入っている項目は必須となります。</p>
+      <form action="#" method="POST">
+        {% set labels = ["第一希望", "第二希望", "第三希望"] %}
+        {% set req = ' required' %}
+        {% set time = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19] %}
+        {% for label in labels %}
+          {% set is_req = true if loop.index < 3 %}
+          <div class="form-field">
+            <div class="form-field-label">相談日時({{label}}){% if is_req %}<span class="label-require">★</span>{% endif %}</div>
+            <div class="form-field-content">
+              <div class="form-control form-control-text">
+                <input type="date" name="date{{loop.index}}"{{req if is_req}}>
+              </div>
+              <div class="form-control form-control-select">
+                <select name="time{{loop.index}}" class="select"{{req if is_req}}>
+                  <option value="">---</option>
+                  {% for tim in time %}
+                  <option value="{{tim}}">{{tim}}</option>
+                  {% endfor %}
+                </select>
+                <span class="form-control-unit">時～</span>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+          <div class="form-field-footer">
+            <div class="form-control form-control-button">
+              <input type="submit" class="button" value="確認する">
+            </div>
+          </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

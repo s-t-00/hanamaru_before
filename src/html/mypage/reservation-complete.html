@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% set page = {
+    "css": ["mypage"],
+    "title": "無料オンライン相談予約 | "
+} %}
+{% set breadcrumb_list = [
+  {
+    "url": "/",
+    "text": "ホーム"
+  }, {
+    "url": "/mypage/",
+    "text": "マイページ"
+  }, {
+    "url": "",
+    "text": "無料オンライン相談予約（完了）"
+  }
+] %}
+{% block content %}
+
+<section class="box-wrapper my-resv-section01">
+  <div class="box-inner">
+  {% include '_breadcrumb.html' %}
+
+    <div class="mypage-status">
+       <ul>
+         <li class="current">重要度チェック</li>
+         <li>お知らせ</li>
+         <li>ステータス確認</li>
+         <li>相続予定財産情報</li>
+       </ul>
+    </div>
+
+    <div class="reservation-form-wrapper">
+      <h3><span class="color-pink">■</span>無料オンライン相談予約</h3>
+      <p class="complete-image"><img src="/images/mypage/reservation-ill01.png" alt=""></p>
+      <div class="form-field-footer">
+        <div class="form-control form-control-button">
+          <input type="button" class="button button-type4" value="マイページへ">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

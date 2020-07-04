@@ -17,7 +17,7 @@
   }
   .form-control {
     /* 入力系インプット */
-    input[type=text], input[type=number], input[type=email], input[type=tel], input[type=password] {
+    input[type=text], input[type=number], input[type=email], input[type=tel], input[type=password], input[type=date], input[type=datetime]  {
       display: inline-block;
       background-color: #fff;
       background-clip: padding-box;
@@ -39,6 +39,37 @@
         border: 1px solid $color-disabled;
         background-color: $color-gray;
       }
+    }
+  }
+  /* インプット用の単位 */
+  .form-control-unit {
+    margin-left: .75rem;
+  }
+  /* 注釈 */
+  .form-control-help::before {
+    content: "※";
+    margin-right: .5rem;
+  }
+  .form-control-help {
+    @include font-line-height(12, 24);
+    text-align: left;
+    margin-top: 10px;
+  }
+  /* セレクトボックス */
+  .form-control-select {
+    select {
+      display: inline-block;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid $color-green;
+      border-radius: 2px;
+      color: $font-color;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1;
+      margin-left: .35rem;
+      padding: .75rem;
+      float: left;
     }
   }
   /* ラジオボタン/チェックボックス系インプット */
@@ -122,7 +153,7 @@
   }
   /* ボタン系インプット */
   .form-control-button {
-    input[type=submit], button, .button {
+    input[type=submit], input[type=button], button, .button {
       width: 100%;
       text-align: center;
       display: block;
@@ -140,12 +171,17 @@
         outline-color: $color-pink;
       }
       &::after {
-        content: "\03e";
+        content: "";
+        width: 0.75em;
+        height: 0.75em;
         right: 10px;
         top: 50%;
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
-        font-size: .95rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(/images/common/button-arrow01.png);
+        display: block;
         position: absolute;
       }
       &.button-type2 {
@@ -157,9 +193,9 @@
           outline-color: $color-cream;
         }
         &::after {
-          content: "\03c";
           left: 10px;
           right: inherit;
+          background-image: url(/images/common/button-arrow02.png);
         }
       }
       &.button-type3 {
@@ -171,20 +207,15 @@
           outline-color: $color-gray;
         }
       }
+      &.button-type4 {
+        background-color: $color-pink;
+        outline-color: $color-pink;
+        .is_notTouchDevice &:hover, .is_notTouchDevice &:focus {
+          background-color: $color-green;
+          outline-color: $color-green;
+        }
+      }
     }
-  }
-  .form-control-unit {
-    margin-left: .75rem;
-  }
-  /* 注釈 */
-  .form-control-help::before {
-    content: "※";
-    margin-right: .5rem;
-  }
-  .form-control-help {
-    @include font-line-height(12, 24);
-    text-align: left;
-    margin-top: 10px;
   }
 }
 
@@ -197,7 +228,7 @@
   }
   .form-control {
     /* 入力系インプット */
-    input[type=text], input[type=number], input[type=email], input[type=tel], input[type=password] {
+    input[type=text], input[type=number], input[type=email], input[type=tel], input[type=password], input[type=date], input[type=datetime] {
       margin-left: .5rem;
       padding: .375rem;
     }

@@ -93,14 +93,19 @@
           a {
             display: flex;
             &::after {
-              content: "\03e";
+              content: "";
               top: 50%;
               right: 10px;
+              width: .75em;
+              height: .75em;
               @include font-size(20);
               font-weight: 600;
               -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%);
-              display: inline-block;
+              background-image: url(/images/mypage/troubles-icon01.png);
+              background-repeat: no-repeat;
+              background-size: contain;
+              display: block;
               position: absolute;
             }
             p {
@@ -560,6 +565,58 @@
       }
     }
   }
+
+  // 無料オンライン相談
+  .my-resv-section01 {
+    .reservation-form-wrapper {
+      h3 {
+        @include font-size(24);
+      }
+    }
+    .label-require {
+      font-size: .8em;
+      color: $color-pink;
+      vertical-align: top;
+    }
+    .form-field {
+      @include font-size(18);
+      padding: 10px 0;
+      .form-field-label {
+        width: 100%;
+      }
+      .form-field-content {
+        width: 100%;
+        display: table;
+        .form-control {
+          width: 50%;
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .form-control-unit {
+          padding-top: .75em;
+          display: inline-block;
+        }
+      }
+      input[type=date], select {
+        border-color: $color-pink;
+      }
+    }
+    .confirm-field {
+      @include font-size(18);
+      border-bottom: 1px solid $color-pink;
+      padding: 20px 10px 10px 10px;
+      &:first-of-type {
+        margin-top: 10px;
+      }
+    }
+    .complete-image {
+      width: 260px;
+      margin: 20px auto 50px;
+    }
+    .form-field-footer {
+      margin: 30px 0 0;
+    }
+  }
 }
 
 @include desktop {
@@ -733,7 +790,7 @@
       display: flex;
       flex-wrap: wrap;
       dt {
-        flex-basis: 40%;
+        flex-basis: 42%;
         text-indent: .5em;
         border-right: 1px solid $color-pink;
         border-bottom: 1px solid $color-pink;
@@ -741,7 +798,7 @@
         padding: 14px 0 4px;
       }
       dd {
-        flex-basis: 60%;
+        flex-basis: 54%;
         padding: 14px .5em 4px;
         text-align: right;
         .my-leg-detail-prices {
@@ -844,6 +901,70 @@
           margin: 0 auto;
         }
       }
+    }
+  }
+
+  // 無料オンライン相談
+  .my-resv-section01 {
+    .reservation-form-wrapper {
+      h3 {
+        @include font-size(26);
+      }
+      p {
+        @include font-size(20);
+      }
+    }
+    form {
+      margin: 10px 0 10px 10px;
+    }
+    .form-field {
+      display: flex;
+      padding: 10px 0;
+      align-items: center;
+      .form-field-label {
+        flex-basis: 36%;
+        @include font-size(26);
+      }
+      .form-field-content {
+        .form-control {
+          width: auto;
+          display: inline-flex;
+          input[type=date] {
+            width: 300px;
+            padding: 0.8em .375em;
+          }
+          select {
+            width: 200px;
+            margin-left: .75em;
+          }
+        }
+      }
+    }
+    .confirm-field {
+      width: 100%;
+      @include font-size(24);
+      padding-bottom: 0;
+      display: table;
+      .confirm-label {
+        width: 35%;
+        border-right: 1px solid $color-pink;
+        display: table-cell;
+        padding: 0 0 10px 0;
+      }
+      .confirm-content {
+        display: table-cell;
+        padding: 0 0 10px 20px;
+      }
+    }
+    .complete-image {
+      width: 350px;
+    }
+    .form-field-footer {
+      width: 400px;
+      margin: 30px auto 0;
+    }
+    .confirm-field + .form-field-footer {
+      margin-top: 50px;
     }
   }
 }
