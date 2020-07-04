@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 {% set page = {
-    "css": ["mypage"],
+    "css": ["mypage", "vender/jquery-ui"],
+    "js": ["vender/jquery-ui", "mypage/reservation-form"],
     "title": "無料オンライン相談予約 | "
 } %}
 {% set breadcrumb_list = [
@@ -43,7 +44,7 @@
             <div class="form-field-label">相談日時({{label}}){% if is_req %}<span class="label-require">★</span>{% endif %}</div>
             <div class="form-field-content">
               <div class="form-control form-control-text">
-                <input type="date" name="date{{loop.index}}"{{req if is_req}}>
+                <input type="text" name="date{{loop.index}}" placeholder="日付を選択" class="datepicker"{{req if is_req}}>
               </div>
               <div class="form-control form-control-select">
                 <select name="time{{loop.index}}" class="select"{{req if is_req}}>

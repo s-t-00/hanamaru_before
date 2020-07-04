@@ -597,7 +597,7 @@
           display: inline-block;
         }
       }
-      input[type=date], select {
+      input[type=text], select {
         border-color: $color-pink;
       }
     }
@@ -929,7 +929,7 @@
         .form-control {
           width: auto;
           display: inline-flex;
-          input[type=date] {
+          input[type=text] {
             width: 300px;
             padding: 0.8em .375em;
           }
