@@ -12,6 +12,14 @@
   margin-right: 4px;
 }
 
+@for $i from 1 to 4 {
+  .u_mt#{$i * 10} { margin-top: calc( 0.5em * #{$i} ); }
+  .u_mr#{$i * 10} { margin-right: calc( 0.5em * #{$i} ); }
+  .u_mb#{$i * 10} { margin-bottom: calc( 0.5em * #{$i} ); }
+  .u_mr#{$i * 10} { margin-left: calc( 0.5em * #{$i} ); }
+}
+
+
 @include touch {
   .sp-none { display: none; }
   .pc-none { display: block; }

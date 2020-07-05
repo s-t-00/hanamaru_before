@@ -112,12 +112,14 @@
       }
     }
     .modal-footer {
-      .form-control .button {
+      .form-control {
         width: 60%;
-        @include font-size(24);
-        background-color: $color-pink;
         margin: .25em auto;
-        padding: .25em 0;
+        .button {
+          @include font-size(24);
+          background-color: $color-pink;
+          padding: .25em 0;
+        }
       }
     }
   }
