@@ -1,0 +1,126 @@
+// ----------------------------------------------------------------
+// モーダル専用
+// ----------------------------------------------------------------
+@import "_setting/_variables";
+@import "_setting/_mixin";
+
+@include touch {
+  .modal-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0,0,0, 0.75 );
+    position: fixed;
+    z-index: 9999;
+    display: block;
+  }
+  .modal-wrapper {
+      left: 1%;
+      top: 1%;
+      width: 98%;
+      height: 98%;
+      min-width: $content-layout-sp-width;
+      background-color: $color-white;
+      border: 1px solid $color-gray;
+      margin: 0;
+      padding: 10px;
+      position: relative;
+      z-index: 1;
+      .modal-header {
+        width: 100%;
+        padding: 0 0 4px;
+        text-align: right;
+        .modal-close {
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+        }
+      }
+      .modal-body {
+        height: calc( 100% - 60px );
+        padding: 10px 0 50px;
+        overflow-y: scroll;
+      }
+      .modal-footer {
+        left: 1%;
+        bottom: 30px;
+        width: 98%;
+        height: 30px;
+        position: absolute;
+        z-index: 5;
+      }
+  }
+  .modal-my-status {
+    h3 {
+      @include font-size(24);
+      margin: 0;
+    }
+    .form-field-wrapper {
+      width: 100%;
+      padding: 0 0 10px;
+      .form-control input[type=text] {
+        width: 94%;
+        border-color: $color-pink;
+      }
+    }
+    .form-field-border-bottom {
+      border-bottom: 1px solid $color-pink;
+      padding: 0 0 30px;
+    }
+    .modal-footer {
+      .form-control .button {
+        @include font-size(24);
+        background-color: $color-pink;
+        margin: .25em 0;
+        padding: .25em 0;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .modal-overlay {
+    .modal-wrapper {
+        left: 50%;
+        top: 50%;
+        width: 65%;
+        height: 80%;
+        max-width: calc( #{$content-layout-width} - 300px );
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        position: absolute;
+    }
+  }
+
+  .modal-my-status {
+    .modal-body {
+      .form-field {
+        width: 100%;
+        padding: 0 0 20px;
+        display: table;
+      }
+      .form-field-border-bottom {
+        margin-bottom:30px;
+      }
+      .form-field-label, .form-control {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .form-field-label {
+        width: 40%;
+      }
+    }
+    .modal-footer {
+      .form-control {
+        width: 60%;
+        margin: .25em auto;
+        .button {
+          @include font-size(24);
+          background-color: $color-pink;
+          padding: .25em 0;
+        }
+      }
+    }
+  }
+}

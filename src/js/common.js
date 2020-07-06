@@ -49,5 +49,10 @@ $(function() {
     $target = $(this).siblings("[data-rel='js-accordion']");
     $target.slideToggle(200);
   });
+
+  $modal_close = $(".js-modal-close");
+  $modal_close.bind("click", function(){
+    $(".modal-overlay").css("display", "none");
+  });
 });
 

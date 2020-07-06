@@ -42,6 +42,11 @@
           color: $color-white;
           background-color: $color-pink;
         }
+        a{
+            &:hover{
+            color: $color-pink;         
+          }
+        }
       }
     }
   }
@@ -93,14 +98,19 @@
           a {
             display: flex;
             &::after {
-              content: "\03e";
+              content: "";
               top: 50%;
               right: 10px;
+              width: .75em;
+              height: .75em;
               @include font-size(20);
               font-weight: 600;
               -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%);
-              display: inline-block;
+              background-image: url(/images/mypage/troubles-icon01.png);
+              background-repeat: no-repeat;
+              background-size: contain;
+              display: block;
               position: absolute;
             }
             p {
@@ -233,6 +243,158 @@
     }
     .form-field-footer {
       padding: 20px;
+    }
+  }
+
+  // ステータス確認（横5文字*縦5行）
+  $my-st-list-width: 104px;
+  $my-st-list-height: 93px;
+  .my-st-section01 {
+    .my-st-member {
+      background-color: $color-gray;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px 10px;
+      margin: 20px 0;
+      .my-st-member-image {
+        width: 64px;
+        align-self: center;
+      }
+      .my-st-member-info {
+        width: calc( 100% - 74px );
+        margin-left: 10px;
+        p {
+          span {
+            display: block;
+          }
+        }
+      }
+      .my-st-member-button {
+        width: 100%;
+        padding: 10px 0;
+        display: table;
+        .form-control {
+          width: 48%;
+          display: table-cell;
+          &:first-child {
+            padding-right: 4%;
+          }
+          .button {
+            @include font-size(14);
+          }
+        }
+      }
+    }
+    .box-inner-no-padding {
+      h3 {
+        color: $color-white;
+        @include font-size(24);
+        text-align: center;
+        background-color: $color-green;
+      }
+      .my-st-family-tree {
+        background-color: $color-gray;
+        padding: 20px;
+        .my-st-family-group {
+          width: 100%;
+          max-width: 390px;
+          color: $color-dark-gray;
+          display: flex;
+          justify-content: space-between;
+          margin: 0 auto;
+          // 104px*158px（5文字*5列)
+          div {
+            ul {
+              width: $my-st-list-width;
+              min-height: $my-st-list-height;
+              background-color: $color-white;
+              border: 2px solid $color-green;
+              display: inline-flex;
+              align-items: center;
+              flex-wrap: wrap;
+              padding: 10px;
+              li {
+                width: 100%;
+                display: block;
+              }
+            }
+            &.is_selected {
+              ul {
+                border-color: $color-pink;
+              }
+            }
+            .my-st-family-rel {
+              width: $my-st-list-width;
+              height: 24px;
+              background-color: $color-gray;
+              text-align: center;
+            }
+          }
+          &.my-st-family-group1 {
+            div {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+          &.my-st-family-group2 {
+            .my-st-family-group2-space {
+              width: calc( 100% -  #{$my-st-list-width} * 2 );
+              background-image: url(/images/mypage/status-border2.png);
+              background-repeat: no-repeat;
+              background-position: 50% -80%;
+              padding-bottom: 40px;
+              display: block;
+            }
+          }
+          &.my-st-family-group3 {
+            .my-st-family-group3-space1 {
+              width: calc( 100% - (#{$my-st-list-width} * 2 + 20px) );
+              background-image: url(/images/mypage/status-border3.png);
+              background-repeat: no-repeat;
+              background-position: 40px 500%;
+              padding-bottom: 40px;
+              display: block;
+            }
+            .my-st-family-group3-space2 {
+              width: 20px;
+              background-image: url(/images/mypage/status-border4.png);
+              background-repeat: repeat-x;
+              background-position: 0 30%;
+              display: block;
+            }
+            .my-st-family-group3-1 {
+              ul {
+                border-color: $color-dark-gray;
+              }
+            }
+            .my-st-family-group3-2 {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+          &.my-st-family-group4 {
+            .my-st-family-group4-2 {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .form-field-single {
+      width: calc( 100% - 40px );
+      display: block;
+      margin: 30px auto 0;
     }
   }
 
@@ -401,11 +563,60 @@
       }
     }
     .form-control-button {
-      button {
-        width: 90%;
-        box-shadow: 1px 2px 4px gray;
-        margin: 20px auto;
+      width: 90%;
+      margin: 20px auto;
+    }
+  }
+
+  // 無料オンライン相談
+  .my-resv-section01 {
+    .reservation-form-wrapper {
+      h3 {
+        @include font-size(24);
       }
+    }
+    .label-require {
+      font-size: .8em;
+      color: $color-pink;
+      vertical-align: top;
+    }
+    .form-field {
+      @include font-size(18);
+      padding: 10px 0;
+      .form-field-label {
+        width: 100%;
+      }
+      .form-field-content {
+        width: 100%;
+        display: table;
+        .form-control {
+          width: 50%;
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .form-control-unit {
+          padding-top: .75em;
+          display: inline-block;
+        }
+      }
+      input[type=text], select {
+        border-color: $color-pink;
+      }
+    }
+    .confirm-field {
+      @include font-size(18);
+      border-bottom: 1px solid $color-pink;
+      padding: 20px 10px 10px 10px;
+      &:first-of-type {
+        margin-top: 10px;
+      }
+    }
+    .complete-image {
+      width: 260px;
+      margin: 20px auto 50px;
+    }
+    .form-field-footer {
+      margin: 30px 0 0;
     }
   }
 }
@@ -475,6 +686,102 @@
     }
   }
 
+  // ステータス確認
+  $my-st-box-width: 570px;
+  $my-st-list-width: 104px;
+  $my-st-list-height: 9393px;
+  .my-st-section01 {
+    .my-st-member {
+      padding: 5px 5px 5px 20px;
+      margin: 20px 0;
+      .my-st-member-image {
+        width: 64px;
+      }
+      .my-st-member-info {
+        width: calc( 60% - 80px );
+        align-self: center;
+        margin-left: 16px;
+        p {
+          span {
+            display: inline-block;
+            margin-right: 2em;
+          }
+        }
+      }
+      .my-st-member-button {
+        width: 40%;
+        align-self: center;
+        padding: 0;
+        .form-control {
+          width: 49%;
+          &:first-child {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+    .box-inner-no-padding {
+      h3 {
+        color: $color-white;
+        @include font-size(24);
+        text-align: center;
+        background-color: $color-green;
+      }
+      .my-st-family-tree {
+        .my-st-family-group {
+          max-width: $my-st-box-width;
+          &.my-st-family-group2 {
+            .my-st-family-group2-space {
+              background-position: 50% 100%;
+              background-size: contain;
+            }
+          }
+          &.my-st-family-group3 {
+            .my-st-family-group3-space1 {
+              width: calc( #{$my-st-box-width} / 2 - #{$my-st-list-width} / 2 );
+              background-image: url(/images/mypage/status-border3.png);
+              background-repeat: no-repeat;
+              background-position: 40px 455%;
+              padding-bottom: 40px;
+              display: block;
+            }
+            .my-st-family-group3-space2 {
+              width: calc( #{$my-st-box-width} / 2 - #{$my-st-list-width} - #{$my-st-list-width} / 2 );
+              background-image: url(/images/mypage/status-border4.png);
+              background-repeat: repeat-x;
+              background-position: 0 26%;
+              display: block;
+            }
+            .my-st-family-group3-1 {
+              ul {
+                border-color: $color-dark-gray;
+              }
+            }
+            .my-st-family-group3-2 {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+          &.my-st-family-group4 {
+            .my-st-family-group4-2 {
+              background-image: url(/images/mypage/status-border1.png);
+              background-repeat: repeat-y;
+              background-size: contain;
+              background-position: center;
+              padding-bottom: 40px;
+            }
+          }
+        }
+      }
+    }
+    .form-field-single {
+      width: 360px;
+    }
+  }
+
   // 相続財産予定一覧
   .my-leg-section01 {
     h3 {
@@ -485,7 +792,7 @@
       display: flex;
       flex-wrap: wrap;
       dt {
-        flex-basis: 40%;
+        flex-basis: 42%;
         text-indent: .5em;
         border-right: 1px solid $color-pink;
         border-bottom: 1px solid $color-pink;
@@ -493,7 +800,7 @@
         padding: 14px 0 4px;
       }
       dd {
-        flex-basis: 60%;
+        flex-basis: 54%;
         padding: 14px .5em 4px;
         text-align: right;
         .my-leg-detail-prices {
@@ -590,12 +897,76 @@
       padding: 20px 0;
       clear: both;
       .form-control-button {
+        width: 360px;
+        margin: 0 auto;
         input[type=submit], button {
-          width: 360px;
           padding: .5em 0;
-          margin: 0 auto;
         }
       }
+    }
+  }
+
+  // 無料オンライン相談
+  .my-resv-section01 {
+    .reservation-form-wrapper {
+      h3 {
+        @include font-size(26);
+      }
+      p {
+        @include font-size(20);
+      }
+    }
+    form {
+      margin: 10px 0 10px 10px;
+    }
+    .form-field {
+      display: flex;
+      padding: 10px 0;
+      align-items: center;
+      .form-field-label {
+        flex-basis: 36%;
+        @include font-size(26);
+      }
+      .form-field-content {
+        .form-control {
+          width: auto;
+          display: inline-flex;
+          input[type=text] {
+            width: 300px;
+            padding: 0.8em .375em;
+          }
+          select {
+            width: 200px;
+            margin-left: .75em;
+          }
+        }
+      }
+    }
+    .confirm-field {
+      width: 100%;
+      @include font-size(24);
+      padding-bottom: 0;
+      display: table;
+      .confirm-label {
+        width: 35%;
+        border-right: 1px solid $color-pink;
+        display: table-cell;
+        padding: 0 0 10px 0;
+      }
+      .confirm-content {
+        display: table-cell;
+        padding: 0 0 10px 20px;
+      }
+    }
+    .complete-image {
+      width: 350px;
+    }
+    .form-field-footer {
+      width: 400px;
+      margin: 30px auto 0;
+    }
+    .confirm-field + .form-field-footer {
+      margin-top: 50px;
     }
   }
 }

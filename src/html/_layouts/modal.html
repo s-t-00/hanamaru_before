@@ -7,29 +7,24 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta name="format-detection" content="telephone=no">
 <meta name="description" content="">
-<link href="./css/style.css" rel="stylesheet">
-{% if (page.css == 'true') %}<link href="./css/{{page.name}}.css" rel="stylesheet">{% endif %}
+<link href="/css/style.css" rel="stylesheet">
+{% for css in page.css %}
+<link href="/css/{{css}}.css" rel="stylesheet">
+{% endfor %}
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body id="body">
-  <!-- header -->
-  <header class="header" header>
-    {% include '_header.html' %}
-  </header>
-  <!-- / header -->
 
-  <!-- main -->
-  <article class="main">
+  <section class="modal-overlay">
+    <div class="modal-wrapper{% if (page.class != '') %} {{page.class}}{% endif %}">
     {% block content %}{% endblock %}
-  </article>
-  <!-- / main -->
+    </div>
+  </section>
 
-  <!-- footer -->
-  <footer class="footer" role="contentinfo">
-    {% include '_footer.html' %}
-  </footer>
-  <!-- / footer -->
-
+  <script src="/js/common.js"></script>
+  {% for js in page.js %}
+  <script src="/js/{{js}}.js"></script>
+  {% endfor %}
 </body>
 </html>

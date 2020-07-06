@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+{% set page = {
+    "css": ["mypage"],
+    "title": "無料オンライン相談予約 | "
+} %}
+{% set breadcrumb_list = [
+  {
+    "url": "/",
+    "text": "ホーム"
+  }, {
+    "url": "/mypage/",
+    "text": "マイページ"
+  }, {
+    "url": "",
+    "text": "無料オンライン相談予約（確認）"
+  }
+] %}
+{% block content %}
+
+<section class="box-wrapper my-resv-section01">
+  <div class="box-inner">
+  {% include '_breadcrumb.html' %}
+
+    <div class="mypage-status">
+       <ul>
+         <li class="current">重要度チェック</li>
+         <li><a href="/mypage/notifications.html">お知らせ</a></li>
+         <li><a href="/mypage/status.html">ステータス確認</a></li>
+         <li><a href="/mypage/legacyinfo.html">相続予定財産情報</a></li>
+       </ul>
+    </div>
+
+    <div class="reservation-form-wrapper">
+      <h3><span class="color-pink">■</span>無料オンライン相談予約</h3>
+      <p>各ご記入内容に間違いがないか、ご確認ください。</p>
+      <form action="#" method="POST">
+        <div class="confirm-field">
+          <div class="confirm-label">相談日時（第一希望）</div>
+          <div class="confirm-content">8月10日　14:00～</div>
+        </div>
+        <div class="confirm-field">
+          <div class="confirm-label">相談日時（第二希望）</div>
+          <div class="confirm-content">8月12日　14:00～</div>
+        </div>
+        <div class="confirm-field">
+          <div class="confirm-label">相談日時（第三希望）</div>
+          <div class="confirm-content">8月9日　14:00～</div>
+        </div>
+        <div class="form-field-footer">
+          <div class="form-control form-control-button">
+            <input type="submit" class="button" value="予約する">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

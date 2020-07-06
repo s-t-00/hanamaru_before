@@ -20,6 +20,7 @@
 
   // section01
   .top-section01 {
+    padding: 10px 0 30px;
     background-color: $color-cream;
     h2 img.pc-none {
       width: 55%;
@@ -59,11 +60,6 @@
         width: 2em;
         display: inline-block;
         text-align: right;
-      }
-    }
-    .form-control-button {
-      button {
-        box-shadow: 1px 2px 4px gray;
       }
     }
   }
@@ -266,6 +262,7 @@
   
   // section06
   .top-section06 {
+    padding: 20px 0;
     h3 {
       @extend .title-with-border;
     }
@@ -328,6 +325,7 @@
   // section08
   .top-section08 {
     background-color: $color-gray;
+    padding: 20px 0;
     h3 {
       @extend .title-with-border;
       @include font-size(18);
@@ -353,8 +351,32 @@
       padding: 10px;
       ul {
         li {
+          color:red;
           width: 100%;
           margin: 10px 0 20px;
+          h5 {
+            width: 100%;
+            color: $color-white;
+            @include font-size(20);
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 4px 6px 6px 80px;
+            &.top-sec08-rank01 {
+              background-image: url(/images/top/sec08-rank01-bg.png);
+              background-color: #B89C4F;
+            }
+            &.top-sec08-rank02 {
+              background-image: url(/images/top/sec08-rank02-bg.png);
+              background-color: #C1CAD0;
+            }
+            &.top-sec08-rank03 {
+              background-image: url(/images/top/sec08-rank03-bg.png);
+              background-color: #C3C0AD;
+            }
+            span {
+              @include font-size(14);
+            }
+          }
         }
       }
     }
@@ -448,10 +470,10 @@
       width: 100%;
       clear: both;
       .form-control-button {
-        input[type=submit], button {
-          width: 360px;
+        width: 360px;
+        margin: 0 auto;
+        .button {
           padding: .5em 0;
-          margin: 0 auto;
         }
       }
     }
@@ -666,6 +688,16 @@
       }
       &:last-of-type::after {
         @include clearfix;
+      }
+      ul {
+        li {
+          h5 {
+            @include font-size(24);
+            span {
+              @include font-size(20);
+            }
+          }
+        }
       }
     }
     p {

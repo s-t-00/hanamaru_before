@@ -1,13 +1,61 @@
 {% extends 'modal.html' %}
 {% set page = {
-    "css": ["mypage"],
-    "title": "ステータス確認"
+    "css": ["modal"],
+    "title": "ステータス確認",
+    "class": "modal-my-status"
 } %}
 {% block content %}
 
-<section class="box-wrapper my-st-section01">
-  <div class="box-inner">
-  </div> 
-</section>
+
+  <div class="modal-header">
+    <div class="modal-close">
+      <a href="javascript:;" class="js-modal-close"><img src="/images/common/modal-close.png" alt="モーダルを閉じる"></a>
+    </div>
+  </div>
+  <div class="modal-body">
+    <form action="#" method="POST" id="heir-registration">
+      <div class="form-field-wrapper">
+        <h3>非相続人を登録</h3>
+        <div class="form-field">
+          <div class="form-field-label">名前</div>
+          <div class="form-control form-control-text">
+            <input type="text" name="name" placeholder="太郎">
+          </div>
+        </div>
+      </div>
+      <div class="form-field-wrapper">
+        <h3>相続人を登録</h3>
+        <div class="form-field">
+          <div class="form-field-label">被相続人から見た続柄</div>
+          <div class="form-control form-control-text">
+            <input type="text" name="heir-rel1" placeholder="兄弟姉妹">
+          </div>
+        </div>
+        <div class="form-field form-field-border-bottom">
+          <div class="form-field-label">名前</div>
+          <div class="form-control form-control-text">
+            <input type="text" name="heir-name1" placeholder="太郎">
+          </div>
+        </div>
+        <div class="form-field">
+          <div class="form-field-label">被相続人から見た続柄</div>
+          <div class="form-control form-control-text">
+            <input type="text" name="heir-rel2" placeholder="兄弟姉妹">
+          </div>
+        </div>
+        <div class="form-field form-field-border-bottom">
+          <div class="form-field-label">名前</div>
+          <div class="form-control form-control-text">
+            <input type="text" name="heir-name2" placeholder="太郎">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <div class="form-control form-control-button">
+      <button class="button">更新</button>
+    </div>
+  </div>
 
 {% endblock %}

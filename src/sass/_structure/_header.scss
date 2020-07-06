@@ -25,51 +25,66 @@ header
       left: 0;
       top: 91px;
       width: 100%;
-      height: 165px;
       display: none;
       position: absolute;
       background-color: $color-green;
       z-index: 100;
       ul {
         width: 100%;
-        max-width: $content-layout-sp-width;
-        display: block;
-        margin: 0 auto;
+        min-width: $content-layout-sp-width;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         li {
-          text-indent: -9999%;
           width: 33.33%;
           text-align: center;
-          padding: 18px 0 0;
-          display: block;
-          float: left;
           a {
-            background-repeat: no-repeat;
-            background-position: center;
-            display: block;
+            color: $color-white;
+            display: inline-block;
+            padding: 10px;
+            p {
+              white-space: nowrap;
+              line-height: 1.2;
+            }
+            span {
+              width: 40px;
+              height: 40px;
+              background-repeat: no-repeat;
+              background-position: center top;
+              background-size: contain;
+              display: block;
+              margin: 0 auto 4px;
+            }
           }
         }
-        li:nth-child(n + 4) {
+        li:nth-child(4) {
           width: 50%;
+          padding-left: 10%;
         }
-        .nav-home a {
-          height: 62px;
+        li:nth-child(5) {
+          width: 50%;
+          padding-right: 10%;
+        }
+        .nav-home a span {
           background-image: url(/images/common/navbar-home-sp.png);
         }
-        .nav-inquiry a {
-          height: 61px;
+        .nav-inquiry a span {
           background-image: url(/images/common/navbar-inquiry-sp.png);
         }
-        .nav-faq a {
-          height: 62px;
+        .nav-faq a span {
           background-image: url(/images/common/navbar-faq-sp.png);
         }
-        .nav-registration a {
-          height: 40px;
+        .nav-registration a span {
           background-image: url(/images/common/navbar-resistration-sp.png);
         }
-        .nav-login a {
-          height: 40px;
+        .nav-login a span {
           background-image: url(/images/common/navbar-mypage-login-sp.png);
+        }
+        .nav-mypage a span {
+          background-image: url(/images/common/navbar-mypage-sp.png);
+        }
+        .nav-user a span {
+          background-image: url(/images/common/navbar-user-sp.png);
         }
       }
     }
@@ -102,6 +117,7 @@ header
       padding: 0;
       width: 200px;
       display: table-cell;
+      vertical-align: middle;
       .header-site-logo img {
         width: 200px;
       }
@@ -112,57 +128,63 @@ header
     .navbar-block {
       position: static;
       width: 730px;
-      height: auto;
       padding-left: 70px;
-      display: table-cell;
       background-color: inherit;
-      vertical-align: middle;
       z-index: auto;
+      display: table-cell;
+      vertical-align: middle;
       &.show {
         display: table-cell !important;
       }
       ul {
-        max-width: 100%;
-        margin: 0;
+        display: inline-flex;
+        flex-wrap: nowrap;
         li {
           width: auto;
-          display: inline-block;
-          padding: 0;
-          float: left;
+          text-align: left;
           a {
-            margin-right: 20px;
+            color: $font-color;
+            padding: 0;
+            display: table;
+            vertical-align: middle;
+            p {
+              display: table-cell;
+              padding-left: 6px;
+              vertical-align: inherit;
+            }
+            span {
+              display: table-cell;
+            }
           }
         }
-        li:nth-child(n + 4) {
+        li:nth-child(4) {
           width: auto;
+          padding-left: 0;
         }
-        li:last-of-type a {
-          margin-right: 0;
+        li:nth-child(5) {
+          width: auto;
+          padding-right: 0;
         }
-        .nav-home a {
-          width: 79px;
-          height: 42px;
+        .nav-home a span {
           background-image: url(/images/common/navbar-home.png);
         }
-        .nav-inquiry a {
-          width: 125px;
-          height: 42px;
+        .nav-inquiry a span {
           background-image: url(/images/common/navbar-inquiry.png);
         }
-        .nav-faq a {
-          width: 130px;
-          height: 42px;
+        .nav-faq a span {
           background-image: url(/images/common/navbar-faq.png);
         }
-        .nav-registration a {
-          width: 103px;
-          height: 42px;
+        .nav-registration a span {
           background-image: url(/images/common/navbar-resistration.png);
         }
-        .nav-login a {
-          width: 103px;
-          height: 42px;
+        .nav-login a span {
           background-image: url(/images/common/navbar-mypage-login.png);
+        }
+        .nav-mypage a span {
+          background-image: url(/images/common/navbar-mypage.png);
+        }
+        .nav-user a span {
+          background-image: url(/images/common/navbar-user.png);
         }
       }
     }
