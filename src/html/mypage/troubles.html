@@ -47,9 +47,9 @@
     <div class="mypage-status">
        <ul>
          <li class="current">重要度チェック</li>
-         <li>お知らせ</li>
-         <li>ステータス確認</li>
-         <li>相続予定財産情報</li>
+         <li><a href="/mypage/legacyinfo.html">相続予定財産情報</a></li>
+         <li><a href="/mypage/status.html">ステータス確認</a></li>
+         <li><a href="/mypage/legacyinfo.html">相続予定財産情報</a></li>
        </ul>
     </div>
 
@@ -61,7 +61,7 @@
       <h3>相続に関すること</h3>
       <ul>
         {% for level, text in legacy_lists %}
-          <li><a href="#"><span class="label label-{{level}}"><span></span></span><p>{{text}}</p></a></li>
+          <li><a href="/mypage/trouble-detail.html"><span class="label label-{{level}}"><span></span></span><p>{{text}}</p></a></li>
         {% endfor %}
       </ul>
     </div>
@@ -69,7 +69,7 @@
       <h3>相続以外のこと</h3>
       <ul>
         {% for level, text in others_lists %}
-          <li><a href="#"><span class="label label-{{level}}"><span></span></span><p>{{text}}</p></a></li>
+          <li><a href="/mypage/trouble-detail.html"><span class="label label-{{level}}"><span></span></span><p>{{text}}</p></a></li>
         {% endfor %}
       </ul>
 
