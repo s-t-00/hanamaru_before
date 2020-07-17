@@ -2,6 +2,10 @@
 "title": "葬儀について | " } %} {% set breadcrumb_list = [ { "url": "/", "text":
 "ホーム" }, { "url": "", "text": "葬儀について" } ] %} {% block content %}
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
 <section class="box-wrapper">
   <div class="box-inner">
     {% include '_breadcrumb.html' %}
@@ -254,11 +258,7 @@
         </div>
         <ul class="sp-menu03">
           <li>
-            <img
-              src="http://via.placeholder.com/250x200"
-              alt=""
-              style="margin-top: 20px;"
-            />
+            <img src="http://via.placeholder.com/250x200" alt="" style="margin-top: 20px;" />
             <a href="">
               <div class="local-nav-content03-01">
                 <p>○●○●○について解説！</p>
@@ -266,11 +266,7 @@
             </a>
           </li>
           <li>
-            <img
-              src="http://via.placeholder.com/250x200"
-              alt=""
-              style="margin-top: 20px;"
-            />
+            <img src="http://via.placeholder.com/250x200" alt="" style="margin-top: 20px;" />
             <a href="">
               <div class="local-nav-content03-02">
                 <p>○●○●○について解説！</p>
@@ -278,11 +274,7 @@
             </a>
           </li>
           <li>
-            <img
-              src="http://via.placeholder.com/250x200"
-              alt=""
-              style="margin-top: 20px;"
-            />
+            <img src="http://via.placeholder.com/250x200" alt="" style="margin-top: 20px;" />
             <a href="">
               <div class="local-nav-content03-03">
                 <p>○●○●○について解説！</p>
@@ -307,20 +299,62 @@
         お葬式にはどのような意味があるのでしょう。<br />
         お葬式のことを葬儀と呼んだりお葬式と読んだりします。葬儀には亡くなった人を弔ったり偲ぶための宗教的な意味があるとされております。また、お葬式を開いて葬儀場に会葬にきた関係のあった方々が、祭壇に飾られた故人の遺影を目にして、仏式の場合焼香をしたり、手を合わせたりと儀式に沿った作法を行うことにより、ああこの人とここでお別れの時が来たのだなと理解します。そんな周りの家族や友人、近くに住んでいた近所の人や仕事関係の方々が心の中で、故人とのお別れの時がやってきたと理解して、区切りをつける意味合いも含まれております。<br />
       </div>
-      <div class="content01-circle">
-        <img src="/images/top/souzoku_1.png" alt="" width="24%" />
-        <img src="/images/top/souzoku_2.png" alt="" width="24%" />
-        <img src="/images/top/souzoku_3.png" alt="" width="24%" />
-        <img src="/images/top/souzoku_4.png" alt="" width="24%" />
-        <img src="/images/top/souzoku_5.png" alt="" width="24%" />
-        <img src="/images/top/souzoku_6.png" alt="" width="24%" />
-        <img src="/images/top/souzoku_7.png" alt="" width="24%" />
-        <img src="/images/top/souzoku_8.png" alt="" width="24%" />
+
+
+      <div class="content01-circle-pc">
+        <img src="http://via.placeholder.com/800x400" alt="" width="100%" />
+      </div>
+      <div class="content01-circle-sp">
+        <img src="http://via.placeholder.com/500x600" alt="" width="100%" />
       </div>
 
-      <div class="content01-image">
-        <img src="/images/top/sec08-02-01.png" alt="" width="100%" />
+      <!-- <div class="content01-circle" align="left">
+        <img src="/images/top/souzoku_1.png" alt="" width="22%" />
+        &nbsp;
+        <img src="/images/top/souzoku_2.png" alt="" width="22%" />
+        &nbsp;
+        <img src="/images/top/souzoku_3.png" alt="" width="22%" />
+        &nbsp;
+        <img src="/images/top/souzoku_4.png" alt="" width="22%" />
+        &nbsp;
+        <img src="/images/top/souzoku_5.png" alt="" width="22%" />
+        &nbsp;
+        <img src="/images/top/souzoku_6.png" alt="" width="22%" />
+        &nbsp;
+        <img src="/images/top/souzoku_7.png" alt="" width="22%" />
+        &nbsp;
+        <img src="/images/top/souzoku_8.png" alt="" width="22%" />
+      </div> -->
+
+      <!-- <div class="content01-image-pc">
+        <img src="http://via.placeholder.com/800x350" alt="" width="100%" />
+      </div> -->
+      <!-- <div class="content01-image-sp">
+        <img src="http://via.placeholder.com/500x800" alt="" width="100%" />
+      </div> -->
+
+      <div class="card  mb-4">
+        <div class="card-body">
+          <p class="card-title font-weight-bold h2">葬儀の種類</p>
+          <div class="container text-center ">
+            <div class="row d-flex mb-3 justify-content-center ">
+              <p class="category_btn rounded-pill mr-3  col-5"><span class="card-category-text ">火葬だけを行う場合</span> </p>
+              <p class="category_btn rounded-pill  col-5 "><span class="card-category-text">お葬式を1日で行う場合</span> </p>
+            </div>
+            <div class="row d-flex mb-3 justify-content-center">
+              <p class="category_btn rounded-pill mr-3 col-5 "><span class="card-category-text">家族だけで2日間で行う場合</span>
+              </p>
+              <p class="category_btn rounded-pill col-5 "><span class="card-category-text">家族以外をお葬式に呼ぶ場合</span></p>
+            </div>
+            <div class="row d-flex mb-3 justify-content-center">
+              <p class="category_btn rounded-pill mr-3 col-5 "><span class="card-category-text">仏式以外の葬儀について</span> </p>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
 
       <div class="content-title-box">
         <div class="content02-little-box"></div>
@@ -328,6 +362,10 @@
           末後の水
         </div>
       </div>
+      <div class="content02-image">
+        <img src="http://via.placeholder.com/800x400" alt="" width="100%" />
+      </div>
+
       <div class="content01-text02">
         ご臨終の後最初にすることは末後（まつご）の水です。末後の水にはあの世でのどの渇きに困らないように故人の唇を潤す習わしです。または死に水とも呼びます。<br />
         作法としてはお茶碗に水を入れて、箸などの先にガーゼや布、脱脂綿などに水をしみこませて故人の口元に優しくあてます。<br />
@@ -337,16 +375,21 @@
 
       <a href=""><button>葬儀の種類一覧へ戻る</button></a>
 
-      <div class="content-text-most">
-        <div class="content-title-box">
-          <div class="content01-little-box"></div>
-          <div class="content-title">
-            エンゼルケア
-          </div>
+      <div class="content-title-box">
+        <div class="content02-little-box"></div>
+        <div class="content-title">
+          エンゼルケア
         </div>
+      </div>
+      <div class="content01-text03">
         病院にてご逝去された場合は、医院にもよりますが、清拭や着替えを行います。また脱脂綿を詰めたりして衛生処置も行われます。最近では浴衣や仏衣を着るのではなく気に入っていた洋服を着る方もいます。その際は硬直が始まる前の逝去した当日などに着せ替える必要があります。<br />
         納棺の際に浴衣や仏衣を着た上から書けるようにしてお棺の中に入れる方もいます。<br />
+      </div>
 
+      <a href=""><button>葬儀の種類一覧へ戻る</button></a>
+
+
+      <div class="content-text-most">
         <div class="content-title-box">
           <div class="content02-little-box"></div>
           <div class="content-title">
@@ -356,7 +399,7 @@
         女性の場合は死化粧としてメイクをする方もいます。その際は親族の女性の方が普段使っていた化粧品を使ってお化粧をしてあげることもありますし、葬儀社のメイクスタッフの方に生前の写真やイメージを伝えて生前のイメージに合わせてお化粧を進めるといいでしょう。男性の場合はひげを整えたり、爪を切ったり薄化粧を施すことも最近では多く見られます。また、病気などが理由で生前のお元気だったころに比べ顔がやせてしまっているときは含み綿と言ってお顔をふっくらさせることもあります。
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             葬儀を受注するまでの流れ(動画あり)
           </div>
@@ -376,7 +419,7 @@
         一般的に家族のものが死亡届の提出を行うと思われがちですが、火葬場の予約は葬儀社が行うことがほとんどのため、葬儀社の担当者が死亡届を預かり、自治体に提出を代行し、火葬許可証を火葬場に提出しているのが一般的な流れになります。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             安置する場所を決定して搬送をする
           </div>
@@ -398,7 +441,7 @@
         仏式の場合多くは、枕飾りを設置した後に枕経というお経をお坊さんに呼んでもらうのが、昔からの習わしとなっております。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             仏式の枕飾り（写真・イラスト挿入）
           </div>
@@ -416,7 +459,7 @@
         これの他に故人の普段の食事や好みのものを並べる常饌と呼ばれる供え物をすることもあります。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             キリスト教（写真・イラスト挿入）
           </div>
@@ -436,7 +479,7 @@
         また、希望する葬儀形式がどんな形式なのか、またその形式を選んだ場合どのようなメリットデメリットがあるかも気にする必要があります。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             菩提寺がある場合
           </div>
@@ -478,7 +521,7 @@
         もしすでに互助会に入っているのであれば、エンディングノートに書いて家族に伝えておくとよいでしょう。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             火葬だけを行う場合(直葬・火葬式)
           </div>
@@ -506,7 +549,7 @@
         なお、1日葬は家族だけで行うことが多く見られます。理由としては、火葬の前の時間に1日葬を行うため、時間帯が日中になるので、親族以外の一般関係の会葬者が時間帯が理由で会葬しにくいこともあり、火葬場まで火葬の立ち会いができる親族の方のみで行うことが多いからです。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             お葬式を家族だけで2日間にわたり行う場合(家族葬)
           </div>
@@ -538,7 +581,7 @@
         即日返しのメリットは選ぶ商品にもよりますが、あと返しより費用が割安なことと、後程あと返しの商品を選ばなくていいという喪主の負担を減らせることがメリットです。しかし即日返しといってもあまりにも過分に香典を受け取った先には即日返しを当日に渡したうえで、後程いただいた額の半額をあと返しとして送ることが常識とされています。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             葬儀打ち合わせで葬儀形式が決まったら葬儀の日までに様々なものを準備します。
           </div>
@@ -590,7 +633,7 @@
         また、その際に使っていた茶碗は故人が家にはもう帰れないことを知らせるために家に入る前に玄関先で割ってしまうことが習わしとされています。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             通夜の日
           </div>
@@ -779,7 +822,7 @@
         の位牌は安いものも多いので人気の理由ともなっています。<br />
 
         <div class="content-title-box">
-          <div class="content01-little-box"></div>
+          <div class="content02-little-box"></div>
           <div class="content-title">
             過去帳とは
           </div>
