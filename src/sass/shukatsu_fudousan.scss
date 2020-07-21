@@ -1214,9 +1214,11 @@ section {
     }
 
     .head-bar02 {
-        height: 70px;
+        // height: 70px;
         width: 100px;
         margin-left: 25%;
+        display: table;
+        padding-bottom: 11px;
         padding-top: 11px;
     }
 }
