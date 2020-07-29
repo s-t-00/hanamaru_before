@@ -3,15 +3,25 @@ var $win = $(window);
 $win.on("load resize", function () {
     var windowWidth = window.innerWidth;
 
+
+    // ウィンドウサイズを変化させるごとに画面をリロード
+    var timer = false;
+    $(window).resize(function () {
+        if (timer !== false) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function () {
+            location.reload();
+        }, 200);
+    });
+
+
     if (windowWidth > 1024) {
         // PCの処理
     } else if (windowWidth > 768) {
         // TABの処理
     } else {
         // SPの処理
-
-
-
 
 
 
