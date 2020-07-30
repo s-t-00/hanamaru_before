@@ -1,21 +1,29 @@
 var $win = $(window);
 
 $win.on("load resize", function () {
-    var windowWidth = window.innerWidth;
 
 
-    // ウィンドウサイズを変化させるごとに画面をリロード
-    var timer = false;
+    // ウィンドウサイズ（横幅）を変化させるごとに画面をリロード
+    var timer = 0;
+    var currentWidth = window.innerWidth;
     $(window).resize(function () {
-        if (timer !== false) {
+        if (currentWidth == window.innerWidth) {
+            return;
+        }
+        if (timer > 0) {
             clearTimeout(timer);
         }
+
         timer = setTimeout(function () {
             location.reload();
         }, 200);
+
     });
 
 
+
+
+    var windowWidth = window.innerWidth;
     if (windowWidth > 1024) {
         // PCの処理
     } else if (windowWidth > 768) {
